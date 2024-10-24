@@ -8825,11 +8825,11 @@ h1, h2, h3, h4, h5,
       border-radius: 50%;
       background: #c99b13e6; }
       .ftco-about .my-interest .interest-wrap .icon span {
-        color:white;
+        color: white;
         font-size: 18px; }
     .ftco-about .my-interest .interest-wrap .text {
       font-weight: 600;
-      color: #999999;
+      color: #000000;
       padding-left: 5px; }
 
 .services {
@@ -9199,7 +9199,7 @@ textarea.form-control {
   .ftco-footer .ftco-heading-2 {
     font-size: 17px;
     font-weight: 400;
-    color: #000000; }
+    color: #c99b13e6; }
 
 .ftco-footer-social li {
   list-style: none;
@@ -9294,11 +9294,12 @@ textarea.form-control {
 .img,
 .blog-img,
 .user-img {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  /* background-position: center center; */
+  background-position: center center;
+  width: 100%
  }
-
+ 
 .image-popup {
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
