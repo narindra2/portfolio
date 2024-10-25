@@ -316,43 +316,49 @@ $(function() {
   }
 
 });
+
 (function(){
-    emailjs.init("hB_ucbWO5aYA9bowF"); 
+	emailjs.init("hB_ucbWO5aYA9bowF"); 
 })();
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-	var _this = this ;
-    var submitButton = _this.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
+	event.preventDefault();
+	var _this = this;
+	var submitButton = _this.querySelector('button[type="submit"]');
+	submitButton.disabled = true;
 
-    emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', this)
-        .then(function() {
-            Swal.fire({
-                title: 'Message envoyé avec succès !',
-                text: 'Merci',
-                icon: 'success',
-                showConfirmButton: false,
-  				timer: 2000
-            });
-			setTimeout(function() {
-                document.getElementById('message').value = ""
-                document.getElementById('subject').value = ""
-                document.getElementById('to_name').value = ""
-            }, 1500);
-        }, function(error) {
-            Swal.fire({
-                title: 'Erreur !',
-                text: 'Vérifiez les champs',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
-            console.log(error);
-            
-        }).finally(function () {
-          setTimeout(function() {
-                submitButton.disabled = false;
-            }, 2000);
-        });
+	// Exécute reCAPTCHA et obtient le token
+	grecaptcha.execute('6Ld7z2sqAAAAADEQWw8129SRUT1Hvm9BQIr39-jo', {action: 'submit'}).then(function(token) {
+		document.getElementById('recaptcha_token').value = token;
+
+		// Envoie le formulaire via emailjs une fois que le token est en place
+		emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', _this)
+			.then(function() {
+				Swal.fire({
+					title: 'Message envoyé avec succès !',
+					text: 'Merci',
+					icon: 'success',
+					showConfirmButton: false,
+					confirmButtonColor: '#8CD4F5',
+					timer: 2000
+				});
+				setTimeout(function() {
+					document.getElementById('message').value = "";
+					document.getElementById('subject').value = "";
+					document.getElementById('to_name').value = "";
+				}, 1500);
+			}, function(error) {
+				Swal.fire({
+					title: 'Erreur !',
+					text: 'Vérifiez les champs',
+					icon: 'error',
+					confirmButtonText: 'OK'
+				});
+				console.log(error);
+			}).finally(function () {
+				setTimeout(function() {
+					submitButton.disabled = false;
+				}, 2000);
+			});
+	});
 });
-
