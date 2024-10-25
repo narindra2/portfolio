@@ -344,7 +344,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 			}, function(error) {
 				Swal.fire({
 					title: 'Erreur !',
-					text: "Vérifiez les champs ou le check box à cocher !",
+					text: "Vérifiez les champs ou le check-box à cocher !",
 					icon: 'error',
 					confirmButtonText: 'je comprends'
 				});
