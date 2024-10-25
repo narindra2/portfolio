@@ -8548,7 +8548,7 @@ h1, h2, h3, h4, h5,
             color: #c99b13e6; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {
-              color: #fff;
+              color: #343a40;
               font-size: 50px; } }
           @media (max-width: 767.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {
@@ -9775,4 +9775,10 @@ textarea.form-control {
   .welcome{
     padding-bottom: 85%;
   }
+  .img, .blog-img, .user-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+}
 }
