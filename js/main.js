@@ -344,7 +344,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 			}, function(error) {
 				Swal.fire({
 					title: 'Erreur !',
-					text: 'Vérifiez les champs',
+					text: "Vérifiez les champs   !",
 					icon: 'error',
 					confirmButtonText: 'je comprend'
 				});
