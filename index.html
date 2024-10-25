@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Narindra Dev</title>
+	<title>Narindra portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -17,6 +17,9 @@
 	
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	
@@ -797,31 +800,37 @@
 
 			<div class="row block-9">
 				<div class="col-md-8">
-					<form action="#" class="bg-light p-4 p-md-5 contact-form">
+					<form action="#" id="contactForm" class="bg-light p-4 p-md-5 contact-form">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Votre nom">
+									<input type="text" id="to_name" name="to_name" autocomplete="off" class="form-control" placeholder="Votre nom">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="email" class="form-control" placeholder="Votre email">
+									<input type="email"  name="from_name" class="form-control" placeholder="Votre email">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Sujet">
+									<input type="text" id="subject"   name="subject" autocomplete="off" class="form-control" placeholder="Sujet">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+									<textarea name="message" id="message" autocomplete="off"  cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 								</div>
 							</div>
 							<div class="col-md-12">
+								<div class="g-recaptcha" data-sitekey="6Ld-xGsqAAAAACrSckBdBHNASOY3E_Cp2e7OG2_k"></div><br/>
+							</div>
+							<div class="col-md-12">
 								<div class="form-group">
-									<input type="submit" value="Envoyer un message" class="btn btn-primary py-3 px-5">
+									<button type="submit" 
+									data-sitekey="6Ld-xGsqAAAAACrSckBdBHNASOY3E_Cp2e7OG2_k" 
+									data-callback='onSubmit' 
+									data-action='submit'  class=" g-recaptcha btn btn-primary py-3 px-5">Envoyer un message</button>
 								</div>
 							</div>
 						</div>
@@ -944,6 +953,11 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H4s&sensor=false"></script>
 		<script src="js/google-map.js"></script>
 		
+		<script>
+			function onSubmit(token) {
+			  document.getElementById("contactForm").submit();
+			}
+		  </script>
 		<script src="js/main.js"></script>
 		
 	</body>
