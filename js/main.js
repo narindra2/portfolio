@@ -326,10 +326,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 	var submitButton = _this.querySelector('button[type="submit"]');
 	submitButton.disabled = true;
 
-	// Exécute reCAPTCHA et obtient le token
-	grecaptcha.execute('6Ld7z2sqAAAAADEQWw8129SRUT1Hvm9BQIr39-jo', {action: 'submit'}).then(function(token) {
-		document.getElementById('recaptcha_token').value = token;
-
 		// Envoie le formulaire via emailjs une fois que le token est en place
 		emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', _this)
 			.then(function() {
@@ -360,4 +356,3 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 				}, 2000);
 			});
 	});
-});
