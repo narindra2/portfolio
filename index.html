@@ -20,13 +20,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<script type="text/javascript">
-		var onloadCallback = function() {
-		  grecaptcha.render('html_element', {
-			'sitekey' : '6Ld7z2sqAAAAADEQWw8129SRUT1Hvm9BQIr39-jo'
-		  });
-		};
-	  </script>
 	<link rel="icon" type="image/x-icon" href="images/favicon.PNG">
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -849,12 +842,11 @@
 								</div>
 							</div>
 							<div class="col-md-12">
-								<div id="html_element"></div> <br>
+								<div class="g-recaptcha" data-sitekey="6Ld7z2sqAAAAADEQWw8129SRUT1Hvm9BQIr39-jo"></div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
 									<button type="submit" 
-									
 									class="g-recaptcha btn btn-primary py-3 px-5">Envoyer votre message <span class="icon fa fa-paper-plane pr-4"></span></button>
 								</div>
 							</div>
