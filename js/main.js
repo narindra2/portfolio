@@ -325,7 +325,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 	var _this = this;
 	var submitButton = _this.querySelector('button[type="submit"]');
 	submitButton.disabled = true;
-
 		// Envoie le formulaire via emailjs une fois que le token est en place
 		emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', _this)
 			.then(function() {
