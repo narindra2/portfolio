@@ -333,7 +333,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 					text: 'Merci',
 					icon: 'success',
 					showConfirmButton: false,
-					confirmButtonColor: '#8CD4F5',
+					confirmButtonColor: '#f27474',
 					timer: 2000
 				});
 				setTimeout(function() {
@@ -346,7 +346,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 					title: 'Erreur !',
 					text: 'Vérifiez les champs',
 					icon: 'error',
-					confirmButtonText: 'OK'
+					confirmButtonText: 'je comprend'
 				});
 				console.log(error);
 			}).finally(function () {
