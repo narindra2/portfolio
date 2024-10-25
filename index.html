@@ -69,14 +69,14 @@
 				<div class="overlay"></div>
 				<div class="container-fluid px-md-0">
 					<div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<div class="one-third order-md-last img" style="background-image:url(images/Narindra-bg.jpeg);">
+						<div class="one-third order-md-last img" style="background-image:url(images/Narindra-bg-hidden.jpeg);">
 							<div class="overlay"></div>
 							<div class="overlay-1"></div>
 						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate" style="height: 86%;" data-scrollax=" properties: { translateY: '70%' }">
+						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
 								<span class="subheading">Bienvenue</span>
-								<h1 class="mb-4 mt-3">Bonjour, je suis <span>Narindra</span> ,  Développeur Fullstack</h1>
+								<h1 class="mb-4 mt-3 welcome">Bonjour, je suis <span>Narindra</span> ,  Développeur Fullstack</h1>
 								<!-- <p><a href="#" class="btn btn-primary">Vous étes le bienvenue</a> <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a></p> -->
 							</div>
 						</div>
@@ -392,6 +392,24 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="bg-white rounded-lg shadow p-4">
+						<h4 class="h5 font-weight-bold text-center mb-4">Mobile</h4>
+
+						<!-- Progress bar 1 -->
+						<div class="progress mx-auto" data-value='85'>
+							<span class="progress-left">
+								<span class="progress-bar border-primary"></span>
+							</span>
+							<span class="progress-right">
+								<span class="progress-bar border-primary"></span>
+							</span>
+							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+								<div class="h4 font-weight-bold">85<sup class="small">%</sup></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -413,7 +431,7 @@
 						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-web-programming"></span></div>
 						
 						<div class="media-body">
-							<h3 class="heading mb-3">Application Web</h3>
+							<h2 class="heading mb-3">Application Web</h2>
 							<p>Développement des applications web :  backend avec / ou Frontend , Design, responsive </p>
 						</div>
 					</div> 
@@ -423,7 +441,7 @@
 						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
 
 						<div class="media-body">
-							<h3 class="heading mb-3">Application mobile</h3>
+							<h2 class="heading mb-3">Application mobile</h2>
 							<p>Développement des applications mobile : Cross Platform, Moderne, Rapide, Fuilde  </p>
 						</div>
 					</div> 
@@ -432,7 +450,7 @@
 					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate" style="height: 86%;">
 						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-branding"></span></div>
 						<div class="media-body">
-							<h3 class="heading mb-3">ERP | CRM </h3>
+							<h2 class="heading mb-3">ERP | CRM </h2>
 							<p>Développement des outils :  Tikecting, Tableau de board, Gestion d'access et permission, Ressource humaine , Gestion d'access, Notification, Emailing </p>
 						</div>
 					</div> 
@@ -441,7 +459,7 @@
 					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate" style="height: 86%;">
 						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-advertising"></span></div>
 						<div class="media-body">
-							<h3 class="heading mb-3">Paiment en ligne</h3>
+							<h2 class="heading mb-3">Paiment en ligne</h2>
 							<p> - Integration méthode paiment : Stripe, Paypal, Mobile money  , ...</p>
 						</div>
 					</div> 
@@ -452,7 +470,7 @@
 					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate" style="height: 86%;">
 						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-computer"></span></div>
 						<div class="media-body">
-							<h3 class="heading mb-3">Déploiement de A à Z </h3>
+							<h2 class="heading mb-3">Déploiement de A à Z </h2>
 							<p>Déploiement, configuartion, test,  ...  </p>
 						</div>
 					</div> 
@@ -461,7 +479,7 @@
 					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate" style="height: 86%;">
 						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-vector"></span></div>
 						<div class="media-body">
-							<h3 class="heading mb-3">Maintenace continue </h3>
+							<h2 class="heading mb-3">Maintenace continue </h2>
 							<p>Mis à jour, ...</p>
 						</div>
 					</div> 
@@ -473,11 +491,11 @@
 	<section class="ftco-hireme">
 		<div class="container">
 			<div class="row justify-content-between">
-				<div class="col-md-8 col-lg-8 d-flex align-items-center">
+				<div class="col-md-8 col-lg-9 d-flex align-items-center">
 					<div class="w-100 py-4">
 						<h2>Ayez un projet en tête.</h2>
 						<p>N'hésitez pas à me contacter pour toute question ou pour approfondir la discussion sur votre projet .</p>
-						<p class="mb-0"><a href="#" class="btn btn-white py-3 px-4">Contactez-moi</a></p>
+						<p class="mb-0"><a href="#contact-section" class="btn btn-white py-3 px-4">Contactez-moi</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 col-lg-4 d-flex align-items-end">
@@ -493,12 +511,12 @@
 				<div class="col-md-12 heading-section text-center ftco-animate" style="height: 86%;">
 					<span class="subheading">Projets </span>
 					<h2 class="mb-4">Mes réalisations</h2>
-					<p>Avec des compétences en HTML, CSS, JavaScript, PHP, ainsi que l'utilisation avancée de Vue.js  , Nodejs et Laravel. Ces technologies m'ont permis de créer des interfaces utilisateur dynamiques et des solutions back-end robustes et évolutives et  m'a permis aussi de mener à bien plusieurs projets complexes et innovants.</p>
+					<p>Avec des compétences en HTML, CSS, JavaScript, PHP, ainsi que l'utilisation avancée de <span class="text-success fs-1">Vuejs</span>  , <span class="text-success">Nodejs</span>  et <span class="text-warning">Laravel</span> . Ces technologies m'ont permis de créer des interfaces utilisateur dynamiques et des solutions back-end robustes et évolutives et  m'a permis aussi de mener à bien plusieurs projets complexes et innovants.</p>
 				</div>
 			</div>
 			<div class="row justify-content-center mb-2" >
 				<div class="col-md-12 heading-section text-center ftco-animate  ">
-					<h3 class="mb-2">ERP + CRM : </h3>
+					<h2 class="mb-2">ERP + CRM : </h2>
 				</div>
 			</div>
 			<div class="row">
@@ -507,7 +525,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-15.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4" >
-							<h3 style="color: white;">ERP + CRM</h3>
+							<h2 style="color: white;">ERP + CRM</h2>
 						</div>
 					</div>
 				</div>
@@ -515,7 +533,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-4.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP + Rapport journalier des absences des employés</h3>
+							<h2 style="color: white;">ERP + Rapport journalier des absences des employés</h2>
 						</div>
 					</div>
 				</div>
@@ -523,7 +541,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-455.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP + Ressources humaines</h3>
+							<h2 style="color: white;">ERP + Ressources humaines</h2>
 						</div>
 					</div>
 				</div>
@@ -531,7 +549,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-5.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP + Demande de congé et permission + Gantt </h3>
+							<h2 style="color: white;">ERP + Demande de congé et permission + Gantt </h2>
 						</div>
 					</div>
 				</div>
@@ -539,7 +557,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-9.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP + Gestion des tâches style  Kanban</h3>
+							<h2 style="color: white;">ERP + Gestion des tâches style  Kanban</h2>
 						</div>
 					</div>
 				</div>
@@ -547,7 +565,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-10.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP + Suivi des tâches</h3>
+							<h2 style="color: white;">ERP + Suivi des tâches</h2>
 						</div>
 					</div>
 				</div>
@@ -555,7 +573,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-12.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP + Achat + Stcok + QRcode</h3>
+							<h2 style="color: white;">ERP + Achat + Stcok + QRcode</h2>
 						</div>
 					</div>
 				</div>
@@ -563,7 +581,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-18.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP +  Statistique</h3>
+							<h2 style="color: white;">ERP +  Statistique</h2>
 						</div>
 					</div>
 				</div>
@@ -571,7 +589,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/erp-45.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">ERP +  Planning</h3>
+							<h2 style="color: white;">ERP +  Planning</h2>
 						</div>
 					</div>
 				</div>
@@ -580,9 +598,9 @@
 				
 				
 			</div>
-			<div class="row justify-content-center mb-2" >
+			<div class="row justify-content-center mb-2"  >
 				<div class="col-md-12 heading-section text-center ftco-animate  ">
-					<h3 class="mb-2">Des applications web : </h3>
+					<h2 id="applications-web" class="mb-2">Des applications web : </h2>
 				</div>
 			</div>
 			<div class="row">
@@ -590,7 +608,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-6.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-					 		<h3 style="color: white;">Site web  </h3>
+					 		<h2 style="color: white;">Site web  </h2>
 						</div>
 					</div>
 				</div>
@@ -598,7 +616,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-1.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3  style="color: white;">Site web </h3>
+							<h2  style="color: white;">Site web </h2>
 						</div>
 					</div>
 				</div>
@@ -607,7 +625,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-3.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-				 			<h3 style="color: white;">Site web </h3>
+				 			<h2 style="color: white;">Site web </h2>
 						</div>
 					</div>
 				</div>
@@ -615,7 +633,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-12.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-				 			<h3 style="color: white;">Site web + Moteur de recherche </h3>
+				 			<h2 style="color: white;">Site web + Moteur de recherche </h2>
 						</div>
 					</div>
 				</div>
@@ -623,7 +641,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-4.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-				 		<h3 style="color: white;"	>Site web + Systeme d'abonnement</h3>
+				 		<h2 style="color: white;"	>Site web + Systeme d'abonnement</h2>
 						</div>
 					</div>
 				</div>
@@ -631,7 +649,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-7.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Site web  + systeme d'abonnement</h3>
+							<h2 style="color: white;">Site web  + systeme d'abonnement</h2>
 						</div>
 					</div>
 				</div>
@@ -639,7 +657,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-8.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Site web  + systeme de paiement </h3>
+							<h2 style="color: white;">Site web  + systeme de paiement </h2>
 						</div>
 					</div>
 				</div>
@@ -647,7 +665,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/echo-9.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Site web + API  : IA, vidéo, paiement </h3>
+							<h2 style="color: white;">Site web + API  : IA, vidéo, paiement </h2>
 						</div>
 					</div>
 				</div>
@@ -655,7 +673,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/afr-1.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Réseaux sociaux en Afrique</h3>
+							<h2 style="color: white;">Réseaux sociaux en Afrique</h2>
 						</div>
 					</div>
 				</div>
@@ -663,7 +681,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/afr-2.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Réseaux sociaux en Afrique</h3>
+							<h2 style="color: white;">Réseaux sociaux en Afrique</h2>
 						</div>
 					</div>
 				</div>
@@ -671,7 +689,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/afr-3.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Réseaux sociaux en Afrique<</h3>
+							<h2 style="color: white;">Réseaux sociaux en Afrique<</h2>
 						</div>
 					</div>
 				</div>
@@ -680,7 +698,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/fan-4.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Réseaux sociaux en Afrique</h3>
+							<h2 style="color: white;">Réseaux sociaux en Afrique</h2>
 						</div>
 					</div>
 				</div>
@@ -689,7 +707,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/h-1.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Gestion de file d'attente</h3>
+							<h2 style="color: white;">Gestion de file d'attente</h2>
 						</div>
 					</div>
 				</div>
@@ -698,7 +716,7 @@
 					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/h-2.PNG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3 style="color: white;">Gestion de file d'attente</h3>
+							<h2 style="color: white;">Gestion de file d'attente</h2>
 						</div>
 					</div>
 				</div>
@@ -829,7 +847,7 @@
 								<div class="form-group">
 									<button type="submit" 
 									
-									class=" g-recaptcha btn btn-primary py-3 px-5">Envoyer votre message</button>
+									class="g-recaptcha btn btn-primary py-3 px-5">Envoyer votre message <span class="icon fa fa-paper-plane pr-4"></span></button>
 								</div>
 							</div>
 						</div>
@@ -886,11 +904,11 @@
 					<div class="ftco-footer-widget mb-4 ml-md-4">
 						<h4 class="ftco-heading-2">Liens</h4>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+							<li><a href="#home-section"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
+							<li><a href="#about-section"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+							<li><a href="#services-section"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
+							<li><a href="#projects-section"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
+							<li><a href="#contact-section"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -898,9 +916,9 @@
 					<div class="ftco-footer-widget mb-4">
 						<h4 class="ftco-heading-2">Services</h4>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>ERP | CRM</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Application web, mobile </a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Déploiement, Maintenance  </a></li>
+							<li><a href="#projects-section"><span class="fa fa-chevron-right mr-2"></span>ERP | CRM</a></li>
+							<li><a href="#applications-web""><span class="fa fa-chevron-right mr-2"></span>Application web, mobile </a></li>
+							<li><a href="#services-section"><span class="fa fa-chevron-right mr-2"></span>Déploiement, Maintenance  </a></li>
 						</ul>
 					</div>
 				</div>
@@ -911,7 +929,7 @@
 							<ul>
 								<li><span class="icon fa fa-map marker"></span><span class="text">Antananarivo 101 , Madagascar</span></li>
 								<li><a href="tel://+261343645186"><span class="icon fa fa-phone"></span><span class="text">+261 34 36 451 86</span></a></li>
-								<li><a href="mailto:narindrandimby2@gmail.com"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">narindrandimby2@gmail.com</span></a></li>
+								<li><a href="#contact-section"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">narindrandimby2@gmail.com</span></a></li>
 							</ul>
 						</div>
 						<ul class="ftco-footer-social list-unstyled mt-2">
