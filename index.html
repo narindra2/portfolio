@@ -1596,7 +1596,7 @@
   <span class="ft-ok">ready<span class="ft-blink"></span></span>
 </div>
 <!-- <link rel="stylesheet" href="css/style.min.css"> -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // NAV scroll
   const nav = document.getElementById('nav');
@@ -1671,55 +1671,51 @@
     });
   });
 	(function(){
-		emailjs.init("hB_ucbWO5aYA9bowF"); 
+		emailjs.init({
+        	publicKey: "hB_ucbWO5aYA9bowF"
+    	});
 
 		emailjs.send('service_o4shucm', 'template_1xy1pdx', {
-	        to_name: 'Votre Nom',
-	        from_name: 'Visiteur du Portfolio',
-	        message: 'Quelqu\'un a visité votre portfolio!',
+	        to_name: 'Visituer',
+	        from_name: 'Notification de visite',
+	        message: 'Nouvelle visite détectée sur votre portfolio',
 	        subject: 'Nouvelle visite sur votre portfolio',
 	        visit_date: new Date().toLocaleString('fr-FR'),
-	        visit_url: window.location.href
-    })
-    .then(function(response) {
-        console.log('Email de visite envoyé avec succès!', response);
-    }, function(error) {
-        console.log('Erreur lors de l\'envoi:', error);
-    });
+	        visit_url: window.location.href,
+	    })
+	    .then(function(response) {
+	        console.log('Email de visite envoyé avec succès!', response);
+	    }, function(error) {
+	        console.log('Erreur lors de l\'envoi:', error);
+	    });
 	})();
   // Form submit
 	document.getElementById('contactForm').addEventListener('submit', function(event) {
-	event.preventDefault();
-	var _this = this;
-	var submitButton = _this.querySelector('button[type="submit"]');
-	const successMessage = document.getElementById('success-message');
-	submitButton.disabled = true;
+    event.preventDefault();
+    var _this = this;
+    var submitButton = _this.querySelector('button[type="submit"]');
+    const successMessage = document.getElementById('success-message');
+    submitButton.disabled = true;
 
-
-
-// Masquer après 5 secondes
-
-		// Envoie le formulaire via emailjs une fois que le token est en place
-		emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', _this)
-			.then(function() {
-				successMessage.innerHTML = 'Message envoyé avec succès';
-				setTimeout(() => {
-				  successMessage.innerHTML = '';
-				}, 3000);
-				setTimeout(function() {
-					document.getElementById('message').value = "";
-					document.getElementById('subject').value = "";
-					document.getElementById('to_name').value = "";
-					
-				}, 1500);
-			}, function(error) {
-				console.log(error);
-			}).finally(function () {
-				setTimeout(function() {
-					submitButton.disabled = false;
-				}, 2000);
-			});
-	});
+    emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', _this)
+        .then(function() {
+            successMessage.innerHTML = 'Message envoyé avec succès';
+            setTimeout(() => {
+                successMessage.innerHTML = '';
+            }, 3000);
+            setTimeout(function() {
+                document.getElementById('message').value = "";
+                document.getElementById('subject').value = "";
+                document.getElementById('to_name').value = "";
+            }, 1500);
+        }, function(error) {
+            console.log(error);
+        }).finally(function () {
+            setTimeout(function() {
+                submitButton.disabled = false;
+            }, 2000);
+        });
+});
 
   // ─── LIGHTBOX ─────────────────────────────────────────────
  const lbProjects = [
