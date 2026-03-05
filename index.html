@@ -1672,6 +1672,20 @@
   });
 	(function(){
 		emailjs.init("hB_ucbWO5aYA9bowF"); 
+
+		emailjs.send('service_o4shucm', 'template_1xy1pdx', {
+	        to_name: 'Votre Nom',
+	        from_name: 'Visiteur du Portfolio',
+	        message: 'Quelqu\'un a visité votre portfolio!',
+	        subject: 'Nouvelle visite sur votre portfolio',
+	        visit_date: new Date().toLocaleString('fr-FR'),
+	        visit_url: window.location.href
+    })
+    .then(function(response) {
+        console.log('Email de visite envoyé avec succès!', response);
+    }, function(error) {
+        console.log('Erreur lors de l\'envoi:', error);
+    });
 	})();
   // Form submit
 	document.getElementById('contactForm').addEventListener('submit', function(event) {
