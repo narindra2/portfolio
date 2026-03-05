@@ -1675,19 +1675,43 @@
         	publicKey: "hB_ucbWO5aYA9bowF"
     	});
 
-		emailjs.send('service_o4shucm', 'template_1xy1pdx', {
-	        to_name: 'Visituer',
-	        from_name: 'Notification de visite',
-	        message: 'Nouvelle visite détectée sur votre portfolio',
-	        subject: 'Nouvelle visite sur votre portfolio',
-	        visit_date: new Date().toLocaleString('fr-FR'),
-	        visit_url: window.location.href,
-	    })
-	    .then(function(response) {
-	        console.log('Email de visite envoyé avec succès!', response);
-	    }, function(error) {
-	        console.log('Erreur lors de l\'envoi:', error);
-	    });
+		const userAgent = navigator.userAgent;
+    let os = 'Inconnu';
+    
+    // Détection du système d'exploitation
+    if (userAgent.indexOf('Win') !== -1) os = 'Windows';
+    else if (userAgent.indexOf('Mac') !== -1) os = 'MacOS';
+    else if (userAgent.indexOf('Linux') !== -1) os = 'Linux';
+    else if (userAgent.indexOf('Android') !== -1) os = 'Android';
+    else if (userAgent.indexOf('iOS') !== -1 || userAgent.indexOf('iPhone') !== -1 || userAgent.indexOf('iPad') !== -1) os = 'iOS';
+    
+    // Récupérer l'IP via une API externe
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            const visitorIP = data.ip;
+            
+            // Envoi de l'email avec les informations
+            emailjs.send('service_o4shucm', 'template_1xy1pdx', {
+                to_name: 'Votre Nom',
+                from_name: 'Notification de visite',
+                message: `Nouvelle visite détectée sur votre portfolio`,
+                subject: 'Nouvelle visite sur votre portfolio',
+                visitor_ip: visitorIP,
+                visitor_os: os,
+                visit_date: new Date().toLocaleString('fr-FR'),
+                visit_url: window.location.href,
+                browser: navigator.userAgent
+            })
+            .then(function(response) {
+                console.log('Email de visite envoyé avec succès!', response);
+            }, function(error) {
+                console.log('Erreur lors de l\'envoi:', error);
+            });
+        })
+        .catch(error => {
+            console.log('Erreur lors de la récupération de l\'IP:', error);
+        });
 	})();
   // Form submit
 	document.getElementById('contactForm').addEventListener('submit', function(event) {
