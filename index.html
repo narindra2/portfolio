@@ -1537,20 +1537,20 @@
           <form  action="#" id="contactForm">
             <div class="form-row2">
               <div class="form-field">
-                <input type="text"  placeholder=" " id="to_name" name="to_name" required />
+                <input type="text"  placeholder=" " id="to_name" name="to_name" autocomplete="off" required />
                 <label for="fn">Votre nom</label>
               </div>
               <div class="form-field">
-                <input type="email" id="email" placeholder="nomemainl@gamil.com"   name="from_name" required />
+                <input type="email" id="email" placeholder="nomemainl@gamil.com"  autocomplete="off" name="from_name" required />
                 <label for="fe">Email</label>
               </div>
             </div>
             <div class="form-field">
-              <input type="text" id="subject" name="subject"  placeholder="Sujet" />
+              <input type="text" id="subject" name="subject" autocomplete="off" placeholder="Sujet" />
               <label for="fs">Sujet</label>
             </div>
             <div class="form-field">
-              <textarea  name="message" id="message" rows="5" placeholder=" " required></textarea>
+              <textarea  name="message" id="message" rows="5" placeholder="Votre message ..." autocomplete="off" required></textarea>
               <label for="fm">Message</label>
             </div>
             
@@ -1638,8 +1638,8 @@
     }, 16);
   }
   setTimeout(() => {
-    countUp(document.getElementById('cnt-projets'), 8,  800);
-    countUp(document.getElementById('cnt-clients'), 5,  600);
+    countUp(document.getElementById('cnt-projets'), 10,  800);
+    countUp(document.getElementById('cnt-clients'), 8,  600);
     countUp(document.getElementById('cnt-years'),   5,  800);
   }, 2200);
   // Back to top
