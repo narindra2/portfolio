@@ -1534,24 +1534,27 @@
           <span class="mac-file">message.send — Narindra Dev</span>
         </div>
         <div class="mac-body">
-          <form onsubmit="handleSubmit(event)">
+          <form  action="#" id="contactForm">
             <div class="form-row2">
               <div class="form-field">
-                <input type="text" id="fn" placeholder=" " required />
+                <input type="text"  placeholder=" " id="to_name" name="to_name" required />
                 <label for="fn">Votre nom</label>
               </div>
               <div class="form-field">
-                <input type="email" id="fe" placeholder=" " required />
+                <input type="email" id="email" placeholder="nomemainl@gamil.com"   name="from_name" required />
                 <label for="fe">Email</label>
               </div>
             </div>
             <div class="form-field">
-              <input type="text" id="fs" placeholder=" " />
+              <input type="text" id="subject" name="subject"  placeholder="Sujet" />
               <label for="fs">Sujet</label>
             </div>
             <div class="form-field">
-              <textarea id="fm" rows="5" placeholder=" " required></textarea>
+              <textarea  name="message" id="message" rows="5" placeholder=" " required></textarea>
               <label for="fm">Message</label>
+            </div>
+            <div class="form-field" id="success-message" style="dispaly:none">
+             	<span style="color:var(--green)" >Message bien envoyé</span>
             </div>
             <button type="submit" class="btn-submit rpl" id="submitBtn">Envoyer le message</button>
           </form>
@@ -1592,7 +1595,8 @@
   <span style="color:var(--green)">✓ portfolio deployed</span>
   <span class="ft-ok">ready<span class="ft-blink"></span></span>
 </div>
-
+<!-- <link rel="stylesheet" href="css/style.min.css"> -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // NAV scroll
   const nav = document.getElementById('nav');
@@ -1666,21 +1670,40 @@
       setTimeout(() => w.remove(), 600);
     });
   });
-
+	(function(){
+		emailjs.init("hB_ucbWO5aYA9bowF"); 
+	})();
   // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.textContent = '✓ Message envoyé !';
-    btn.style.color = '#22c55e';
-    btn.style.borderColor = 'rgba(34,197,94,.4)';
-    setTimeout(() => {
-      btn.textContent = 'Envoyer le message';
-      btn.style.color = ''; btn.style.borderColor = ''; btn.disabled = false;
-      e.target.reset();
-    }, 3000);
-  }
+	document.getElementById('contactForm').addEventListener('submit', function(event) {
+	event.preventDefault();
+	var _this = this;
+	var submitButton = _this.querySelector('button[type="submit"]');
+	const msg = document.getElementById('success-message');
+	submitButton.disabled = true;
+	msg.style.display = 'block';
+
+// Masquer après 5 secondes
+
+		// Envoie le formulaire via emailjs une fois que le token est en place
+		emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', _this)
+			.then(function() {
+				setTimeout(() => {
+				  msg.style.display = 'none';
+				}, 5000);
+				setTimeout(function() {
+					document.getElementById('message').value = "";
+					document.getElementById('subject').value = "";
+					document.getElementById('to_name').value = "";
+					document.getElementById('success-message'). = "";
+				}, 1500);
+			}, function(error) {
+				console.log(error);
+			}).finally(function () {
+				setTimeout(function() {
+					submitButton.disabled = false;
+				}, 2000);
+			});
+	});
 
   // ─── LIGHTBOX ─────────────────────────────────────────────
  const lbProjects = [
