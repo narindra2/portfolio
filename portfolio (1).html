@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Narindra — Développeur Fullstack</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto+Slab:wght@300;400;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Narindra, développeur fullstack : créateur de solutions web moderne et évolutifs. Prêt à démarrer votre projet et vous accompagner dès maintenant !">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<meta name="keywords" content="Narindra ,  portfolio , Développeur , Laravel, , Vue , mobile ,  HTML, CSS, Responsive ,  SQL, jQuery , JavaScript, js,  Git, InertiaJS , Stripe, Paypal, Backend, Frontend , API, Rest Full  javascript , Typescript , Application web ,  Développement Frontend, Développement Backend, Technologies Web, Freelance, Madagascar, Antananarivo">
+  <style>
+    /* ─── VARIABLES ───────────────────────────────────────────── */
+    :root {
+      --bg:        #111318;
+      --bg-1:      #181c25;
+      --bg-2:      #1e2230;
+      --text:      #e2e6f0;
+      --muted:     #6b7280;
+      --border:    rgba(255,255,255,.07);
+      --blue:      #3b7fff;
+      --blue-dim:  rgba(59,127,255,.12);
+      --green:     #22c55e;
+      --vue:       #42b883;
+      --vue-dim:   rgba(66,184,131,.12);
+      --laravel:   #ff4433;
+      --laravel-dim: rgba(255,68,51,.1);
+      --mono:      'JetBrains Mono', monospace;
+      --sans:      'Poppins', sans-serif;
+      --serif:     'Roboto Slab', serif;
+    }
+
+    /* ─── LARAVEL + VUE HERO GLOW ─────────────────────────────── */
+    /* Ambient glow top-left (Laravel red) + bottom-right (Vue green) */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(ellipse 40% 35% at 0% 0%, rgba(255,68,51,.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 35% at 100% 100%, rgba(66,184,131,.07) 0%, transparent 70%);
+    }
+
+    /* ─── LARAVEL / VUE BADGE on hero status ─────────────────── */
+    .hero-stack-badges {
+      display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .badge-laravel {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px;
+      background: var(--laravel-dim);
+      border: 1px solid rgba(255,68,51,.25);
+      border-radius: 6px;
+      font-family: var(--mono); font-size: .72rem; font-weight: 600;
+      color: #ff6b5b;
+    }
+    .badge-vue {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px;
+      background: var(--vue-dim);
+      border: 1px solid rgba(66,184,131,.25);
+      border-radius: 6px;
+      font-family: var(--mono); font-size: .72rem; font-weight: 600;
+      color: var(--vue);
+    }
+    .badge-laravel svg, .badge-vue svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ─── VUE HEXAGON DECO ────────────────────────────────────── */
+    .hex-deco {
+      position: absolute; pointer-events: none; z-index: 0;
+      opacity: .06;
+    }
+    .hex-deco svg { display: block; }
+
+    /* ─── LARAVEL/VUE SKILL HIGHLIGHT ────────────────────────── */
+    .skill-row.sk-laravel { border-color: rgba(255,68,51,.18); }
+    .skill-row.sk-laravel:hover { border-color: rgba(255,68,51,.4); }
+    .skill-row.sk-laravel .skill-pct { background: var(--laravel-dim); color: #ff6b5b; }
+    .skill-row.sk-laravel .progress-bar { background: linear-gradient(90deg, #ff4433, #ff8070); }
+
+    .skill-row.sk-vue { border-color: rgba(66,184,131,.18); }
+    .skill-row.sk-vue:hover { border-color: rgba(66,184,131,.4); }
+    .skill-row.sk-vue .skill-pct { background: var(--vue-dim); color: var(--vue); }
+    .skill-row.sk-vue .progress-bar { background: linear-gradient(90deg, #42b883, #7fd1aa); }
+
+    /* ─── HERO TITLE GRADIENT (Vue + Laravel) ────────────────── */
+    .hero-title .stack-grad {
+      background: linear-gradient(90deg, #ff4433 0%, #ff8c42 40%, #42b883 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--text); overflow-x: hidden; line-height: 1.7; }
+    ::selection { background: var(--blue); color: #fff; }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+
+    /* ─── ANIMATIONS ──────────────────────────────────────────── */
+    .fade { animation: fadeUp .55s ease both; }
+    .d1 { animation-delay: .07s; } .d2 { animation-delay: .14s; }
+    .d3 { animation-delay: .21s; } .d4 { animation-delay: .28s; }
+    .d5 { animation-delay: .35s; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 5%;
+      transition: background .3s, box-shadow .3s;
+    }
+    nav.scrolled {
+      background: rgba(17,19,24,.92);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+    .nav-brand {
+      font-family: var(--mono);
+      font-size: 1rem; font-weight: 700;
+      color: var(--text); text-decoration: none;
+    }
+    .nav-brand em { color: var(--blue); font-style: normal; }
+    .nav-links { display: flex; gap: 2px; list-style: none; }
+    .nav-links a {
+      padding: 7px 14px;
+      font-size: .78rem; font-weight: 500;
+      letter-spacing: .07em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+      border-radius: 4px;
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: rgba(255,255,255,.05); }
+    .nav-links a.active { color: var(--blue); }
+
+    /* Terminal button */
+    .btn-term {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px;
+      background: var(--bg-1);
+      border: 1px solid rgba(59,127,255,.3);
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: .78rem; font-weight: 500;
+      color: var(--blue);
+      text-decoration: none; cursor: pointer;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .btn-term::before { content: '→'; color: rgba(59,127,255,.6); flex-shrink: 0; }
+    .btn-term:hover { border-color: rgba(59,127,255,.6); box-shadow: 0 0 14px rgba(59,127,255,.15); color: var(--blue); }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: .78rem; font-weight: 500;
+      color: var(--muted);
+      text-decoration: none; cursor: pointer;
+      transition: border-color .25s, color .25s;
+    }
+    .btn-ghost::before { content: '✉'; color: var(--muted); flex-shrink: 0; font-style: normal; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,.2); color: var(--text); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
+
+    /* ─── LAYOUT ──────────────────────────────────────────────── */
+    section { padding: 100px 5%; position: relative; z-index: 1; }
+    .wrap { max-width: 1160px; margin: 0 auto; }
+    .divider { height: 1px; background: var(--border); margin: 0 5%; }
+
+    /* ─── BREADCRUMB HEADER ───────────────────────────────────── */
+    .sec-header { margin-bottom: 52px; }
+    .breadcrumb {
+      display: inline-flex; align-items: center;
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 13px;
+      margin-bottom: 18px;
+      font-family: var(--mono);
+      font-size: .73rem; gap: 3px;
+    }
+    .bc-root { color: var(--muted); }
+    .bc-sep  { color: rgba(255,255,255,.18); }
+    .bc-dir  { color: var(--blue); opacity: .7; }
+    .bc-file { color: var(--text); font-weight: 600; }
+    .bc-cur  {
+      display: inline-block; width: 7px; height: 13px;
+      background: var(--blue); border-radius: 1px; margin-left: 2px;
+      vertical-align: middle;
+      animation: cur .9s step-end infinite;
+    }
+    @keyframes cur { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    .sec-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 700; letter-spacing: -.02em;
+      color: var(--text); margin-bottom: 10px; line-height: 1.15;
+    }
+    .sec-lead { font-size: 1rem; color: var(--muted); max-width: 500px; line-height: 1.8; }
+
+    /* ─── MAC WINDOW (hero only) ──────────────────────────────── */
+    .mac-win {
+      background: #0d1117;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,.55);
+    }
+    .mac-bar {
+      background: #161b22;
+      padding: 11px 14px;
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      user-select: none;
+    }
+    .mac-dots { display: flex; gap: 6px; }
+    .mac-dot  { width: 12px; height: 12px; border-radius: 50%; }
+    .mac-dot.r { background: #ff5f57; }
+    .mac-dot.y { background: #febc2e; }
+    .mac-dot.g { background: #28c840; }
+    .mac-file {
+      font-family: var(--mono); font-size: .73rem;
+      color: rgba(255,255,255,.3); letter-spacing: .02em;
+    }
+    .mac-body { padding: 22px 24px 26px; }
+
+    /* Terminal syntax */
+    .t-comment { color: rgba(255,255,255,.4); font-style: italic; }
+    .t-key   { color: #ff7b72; font-weight: 600; }
+    .t-str   { color: #c9e8ff; }
+    .t-num   { color: #ffa657; }
+    .t-bool  { color: #79c0ff; font-weight: 600; }
+    .t-brace { color: rgba(255,255,255,.6); font-weight: 600; }
+    .t-eq    { color: rgba(255,255,255,.45); }
+    .t-line  { display: flex; align-items: baseline; gap: 6px; font-family: var(--mono); font-size: .95rem; line-height: 2.1; -webkit-font-smoothing: antialiased; }
+    .t-line.indent { padding-left: 18px; }
+    .t-blank { height: 5px; }
+
+    /* Stats inside mac */
+    .mac-stats {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: rgba(255,255,255,.06);
+      border-radius: 6px; overflow: hidden; margin-top: 18px;
+    }
+    .mac-stat { background: #161b22; padding: 13px 8px; text-align: center; }
+    .mac-stat-n {
+      font-family: var(--mono); font-size: 1.35rem; font-weight: 700;
+      line-height: 1;
+    }
+    .mac-stat-n.blue   { color: var(--blue); }
+    .mac-stat-n.green  { color: var(--green); }
+    .mac-stat-n.orange { color: #ffa657; }
+    .mac-stat-l { font-size: .68rem; color: var(--muted); margin-top: 3px; font-family: var(--sans); }
+
+    /* Tech chips — 2 styles only */
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+    .chip {
+      padding: 4px 11px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: .73rem; font-weight: 500; color: var(--muted);
+    }
+    .chip.hi {
+      background: var(--blue-dim);
+      border-color: rgba(59,127,255,.25);
+      color: #7aabff;
+    }
+
+    /* ─── HERO MAC WINDOW ANIMATIONS ─────────────────────────── */
+    .hero-mac-wrap {
+      animation: float 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 32px rgba(59,127,255,.12));
+      transition: filter .3s;
+    }
+    .hero-mac-wrap:hover {
+      filter: drop-shadow(0 0 48px rgba(59,127,255,.25));
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px) rotate(0deg); }
+      33%      { transform: translateY(-8px) rotate(.3deg); }
+      66%      { transform: translateY(-4px) rotate(-.2deg); }
+    }
+
+    /* Glow ring on mac-win hero */
+    .hero-mac-wrap .mac-win {
+      box-shadow: 0 24px 64px rgba(0,0,0,.6),
+                  0 0 0 1px rgba(59,127,255,.08),
+                  inset 0 1px 0 rgba(255,255,255,.06);
+      transition: box-shadow .4s;
+    }
+    .hero-mac-wrap:hover .mac-win {
+      box-shadow: 0 32px 80px rgba(0,0,0,.7),
+                  0 0 0 1px rgba(59,127,255,.2),
+                  0 0 40px rgba(59,127,255,.08),
+                  inset 0 1px 0 rgba(255,255,255,.08);
+    }
+
+    /* Typing lines — hidden then revealed */
+    .t-line { opacity: 0; animation: typeIn .3s ease forwards; }
+    .t-line:nth-child(1)  { animation-delay: .4s; }
+    .t-line:nth-child(2)  { animation-delay: .55s; }
+    .t-line:nth-child(3)  { animation-delay: .7s; }
+    .t-line:nth-child(4)  { animation-delay: .85s; }
+    .t-line:nth-child(5)  { animation-delay: 1.0s; }
+    .t-line:nth-child(6)  { animation-delay: 1.15s; }
+    .t-line:nth-child(7)  { animation-delay: 1.3s; }
+    .t-line:nth-child(8)  { animation-delay: 1.45s; }
+    .t-line:nth-child(9)  { animation-delay: 1.6s; }
+    .t-line:nth-child(10) { animation-delay: 1.75s; }
+    .t-line:nth-child(11) { animation-delay: 1.9s; }
+    .t-line:nth-child(12) { animation-delay: 2.05s; }
+    .t-line:nth-child(13) { animation-delay: 2.2s; }
+    .t-line:nth-child(14) { animation-delay: 2.35s; }
+    @keyframes typeIn {
+      from { opacity: 0; transform: translateX(-6px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* Stats count-up reveal */
+    .mac-stats { opacity: 0; animation: fadeUp .5s ease 2.6s forwards; }
+    .chips     { opacity: 0; animation: fadeUp .5s ease 2.9s forwards; }
+
+    /* Stat number shimmer on hover */
+    .mac-stat { cursor: default; transition: background .2s; }
+    .mac-stat:hover { background: rgba(59,127,255,.07); }
+    .mac-stat-n {
+      transition: transform .2s;
+    }
+    .mac-stat:hover .mac-stat-n { transform: scale(1.1); }
+
+    /* Dot hover interactions */
+    .mac-dot { transition: transform .15s, opacity .15s; cursor: pointer; }
+    .mac-dot:hover { transform: scale(1.25); opacity: .8; }
+
+    /* Scanline overlay on hero mac */
+    .hero-mac-wrap .mac-win::after {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,.03) 3px,
+        rgba(0,0,0,.03) 4px
+      );
+      border-radius: 12px;
+    }
+
+    /* ─── HERO ────────────────────────────────────────────────── */
+    #accueil {
+      min-height: 100vh; display: flex; align-items: center;
+      padding-top: 90px; overflow: hidden;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      gap: 80px; align-items: center;
+      width: 100%; max-width: 1160px; margin: 0 auto;
+    }
+    .hero-status {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(34,197,94,.08);
+      border: 1px solid rgba(34,197,94,.2);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: .78rem; font-weight: 500; color: var(--green);
+      margin-bottom: 24px;
+    }
+    .status-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      font-weight: 900; line-height: 1.07;
+      letter-spacing: -.04em; color: var(--text); margin-bottom: 20px;
+    }
+    .hero-title .hi    { color: var(--blue); }
+    .hero-title .ghost { -webkit-text-stroke: 1.5px rgba(226,230,240,.25); color: transparent; }
+
+    .hero-body { font-size: 1rem; color: var(--muted); line-height: 1.9; max-width: 440px; margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ─── SKILLS ──────────────────────────────────────────────── */
+    #competences { background: var(--bg-1); }
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 12px;
+    }
+    .skill-row {
+      background: #161b22;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px; padding: 20px 22px;
+      transition: border-color .25s;
+    }
+    .skill-row:hover { border-color: rgba(59,127,255,.3); }
+    .skill-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .skill-name { font-size: 1rem; font-weight: 600; color: var(--text); }
+    .skill-pct {
+      font-family: var(--mono); font-size: .82rem; font-weight: 700;
+      color: var(--blue); background: var(--blue-dim);
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .progress { height: 5px; background: rgba(255,255,255,.07); border-radius: 5px; overflow: hidden; }
+    .progress-bar {
+      height: 100%; background: linear-gradient(90deg, var(--blue), #7aabff);
+      border-radius: 5px; width: 0;
+      transition: width 1.2s cubic-bezier(.4,0,.2,1) .5s;
+    }
+
+    /* ─── SERVICES ────────────────────────────────────────────── */
+    #services { background: var(--bg); }
+    .svc-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 14px;
+    }
+    .svc-card {
+      background: #161b22;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px; padding: 28px;
+      transition: border-color .25s, transform .3s;
+      position: relative; overflow: hidden;
+    }
+    .svc-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--blue); transform: scaleX(0); transform-origin: left;
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+    }
+    .svc-card:hover { border-color: rgba(59,127,255,.25); transform: translateY(-3px); }
+    .svc-card:hover::after { transform: scaleX(1); }
+    .svc-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--blue-dim);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .svc-icon .material-icons { color: var(--blue); font-size: 1.35rem; }
+    .svc-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .svc-text  { font-size: .93rem; color: var(--muted); line-height: 1.85; }
+
+    /* ─── PHOTO GALLERY ───────────────────────────────────────── */
+    .pgal-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .pgal-card {
+      background: #0d1117;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px; overflow: hidden;
+      cursor: pointer;
+      transition: border-color .25s, transform .3s, box-shadow .3s;
+    }
+    .pgal-card:hover {
+      border-color: rgba(59,127,255,.35);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.4);
+    }
+    .pgal-img-wrap {
+      position: relative; overflow: hidden;
+      height: 220px; background: #0d1117;
+    }
+    .pgal-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top;
+      display: block;
+      transition: transform .4s ease;
+    }
+    .pgal-card:hover .pgal-img-wrap img { transform: scale(1.04); }
+    .pgal-img-wrap.img-err {
+      display: flex; align-items: center; justify-content: center;
+      background: #161b22; color: var(--muted); font-size: .8rem;
+    }
+    .pgal-img-wrap.img-err::after { content: 'Image non disponible'; }
+    .pgal-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0);
+      display: flex; align-items: center; justify-content: center;
+      transition: background .3s;
+    }
+    .pgal-overlay .material-icons {
+      color: #fff; font-size: 2.5rem;
+      opacity: 0; transform: scale(.7);
+      transition: opacity .3s, transform .3s;
+    }
+    .pgal-card:hover .pgal-overlay { background: rgba(0,0,0,.35); }
+    .pgal-card:hover .pgal-overlay .material-icons { opacity: 1; transform: scale(1); }
+
+    .pgal-info { padding: 16px 18px 18px; }
+    .pgal-title {
+      font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
+      color: var(--text); margin: 8px 0 6px;
+    }
+    .pgal-desc { font-size: .92rem; color: var(--muted); line-height: 1.75; }
+
+    /* ─── LIGHTBOX ────────────────────────────────────────────── */
+    #lightbox {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,.92);
+      backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    #lightbox.open { display: flex; }
+    .lb-container {
+      position: relative; max-width: 1000px; width: 100%;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .lb-img-wrap {
+      border-radius: 10px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,.1);
+      background: #0d1117;
+      max-height: 70vh;
+    }
+    .lb-img-wrap img {
+      width: 100%; max-height: 70vh;
+      object-fit: contain; display: block;
+    }
+    .lb-caption {
+      background: rgba(22,27,34,.9);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px; padding: 14px 18px;
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    .lb-tag  { font-family: var(--mono); font-size: .7rem; font-weight: 600; color: #7aabff; background: var(--blue-dim); border: 1px solid rgba(59,127,255,.2); border-radius: 100px; padding: 2px 10px; }
+    .lb-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text); }
+    .lb-desc  { font-size: .83rem; color: var(--muted); flex: 1; }
+    .lb-counter { font-family: var(--mono); font-size: .75rem; color: var(--muted); margin-left: auto; }
+    .lb-close {
+      position: absolute; top: -14px; right: -14px;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--bg-2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--text);
+      transition: background .2s;
+    }
+    .lb-close:hover { background: rgba(255,68,51,.2); }
+    .lb-close .material-icons { font-size: 1.1rem; }
+    .lb-nav {
+      position: absolute; top: 50%; transform: translateY(-60%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(22,27,34,.9); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--text);
+      transition: background .2s, border-color .2s;
+    }
+    .lb-nav:hover { background: var(--blue); border-color: var(--blue); }
+    .lb-nav .material-icons { font-size: 1.6rem; }
+    .lb-prev { left: -22px; }
+    .lb-next { right: -22px; }
+
+    @media (max-width: 768px) {
+      .pgal-grid { grid-template-columns: 1fr; }
+      .lb-prev { left: 8px; } .lb-next { right: 8px; }
+    }
+
+    /* ─── TESTIMONIALS ────────────────────────────────────────── */
+    .testi-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 16px;
+    }
+    .testi-card {
+      background: #161b22; border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px; padding: 28px;
+      display: flex; flex-direction: column;
+      transition: border-color .25s, transform .3s;
+      position: relative; overflow: hidden;
+    }
+    .testi-card::before {
+      content: '\201C';
+      position: absolute; top: 10px; right: 18px;
+      font-size: 4.5rem; line-height: 1;
+      color: rgba(59,127,255,.08);
+      font-family: Georgia, serif;
+      pointer-events: none;
+    }
+    .testi-card:hover { border-color: rgba(59,127,255,.2); transform: translateY(-3px); }
+    .testi-stars { color: #ffa657; font-size: .95rem; letter-spacing: 3px; margin-bottom: 14px; }
+    .testi-text {
+      font-size: .95rem; color: rgba(226,230,240,.85);
+      line-height: 1.85; font-style: normal;
+      margin-bottom: 22px; flex: 1;
+    }
+    .testi-author { display: flex; align-items: center; gap: 14px; border-top: 1px solid rgba(255,255,255,.06); padding-top: 16px; }
+    .testi-ava {
+      width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+      overflow: hidden;
+      border: 2px solid rgba(59,127,255,.2);
+      background: var(--bg-2);
+    }
+    .testi-ava img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .testi-name { font-size: .95rem; font-weight: 700; color: var(--text); }
+    .testi-role { font-size: .78rem; color: var(--muted); margin-top: 3px; }
+
+    /* ─── CONTACT ─────────────────────────────────────────────── */
+    #contact { background: var(--bg); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
+
+    .contact-info {
+      background: var(--bg-1); border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+    }
+    .contact-info-head {
+      padding: 20px 24px; border-bottom: 1px solid var(--border);
+      background: var(--bg-2);
+    }
+    .contact-info-head h3 { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text); }
+    .contact-info-head p  { font-size: .8rem; color: var(--muted); margin-top: 2px; }
+
+    .c-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 15px 22px; border-bottom: 1px solid var(--border);
+      text-decoration: none; transition: background .2s;
+    }
+    .c-item:last-child { border-bottom: none; }
+    .c-item:hover { background: rgba(255,255,255,.03); }
+    .c-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--blue-dim);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .c-icon .material-icons { color: var(--blue); font-size: 1.05rem; }
+    .c-label { font-size: .75rem; color: var(--muted); letter-spacing: .05em; text-transform: uppercase; }
+    .c-val   { font-size: .93rem; font-weight: 500; color: var(--text); word-break: break-all; }
+
+    /* Form */
+    .form-card {
+      background: var(--bg-1); border: 1px solid var(--border);
+      border-radius: 10px; padding: 28px;
+    }
+    .form-card h3 { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 22px; }
+    .form-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-field { position: relative; margin-bottom: 14px; }
+    .form-field input, .form-field textarea {
+      width: 100%; background: #161b22; border: 1px solid rgba(255,255,255,.08);
+      border-bottom: 2px solid rgba(255,255,255,.12);
+      border-radius: 6px 6px 0 0; padding: 19px 14px 7px;
+      color: var(--text); font-family: var(--sans); font-size: .9rem;
+      outline: none; resize: none; transition: border-color .2s, background .2s;
+    }
+    .form-field input:focus, .form-field textarea:focus {
+      background: rgba(59,127,255,.05); border-bottom-color: var(--blue);
+    }
+    .form-field label {
+      position: absolute; top: 13px; left: 14px;
+      font-size: .83rem; color: var(--muted); pointer-events: none;
+      transition: top .2s, font-size .2s, color .2s;
+    }
+    .form-field input:focus ~ label,
+    .form-field input:not(:placeholder-shown) ~ label,
+    .form-field textarea:focus ~ label,
+    .form-field textarea:not(:placeholder-shown) ~ label {
+      top: 5px; font-size: .68rem; color: var(--blue);
+    }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: transparent; }
+
+    .btn-submit {
+      width: 100%; padding: 13px;
+      background: var(--bg-2); border: 1px solid rgba(59,127,255,.3);
+      border-radius: 6px;
+      font-family: var(--mono); font-size: .82rem; font-weight: 500;
+      color: var(--blue); cursor: pointer; margin-top: 6px;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .btn-submit::before { content: '→ '; color: rgba(59,127,255,.6); }
+    .btn-submit:hover { border-color: rgba(59,127,255,.6); box-shadow: 0 0 14px rgba(59,127,255,.15); }
+
+    /* ─── HERO GRID BACKGROUND ───────────────────────────────── */
+    #accueil::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(59,127,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,127,255,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 80% 70% at 60% 50%, black 30%, transparent 80%);
+    }
+    #accueil::after {
+      content: '';
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(ellipse 60% 60% at 70% 50%, rgba(59,127,255,.06) 0%, transparent 70%);
+    }
+    #accueil > * { position: relative; z-index: 1; }
+
+    #services::before, #temoignages::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(59,127,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,127,255,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 75%);
+    }
+    #services::after, #temoignages::after {
+      content: '';
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(ellipse 60% 60% at 30% 50%, rgba(59,127,255,.05) 0%, transparent 70%);
+    }
+    #services > *, #temoignages > * { position: relative; z-index: 1; }
+    /* ─── TECH BANNER ─────────────────────────────────────────── */
+    .tech-banner {
+      background: #0d1117;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 5%;
+      overflow: hidden;
+    }
+    .tech-banner-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .tb-label {
+      font-family: var(--mono); font-size: .68rem;
+      color: var(--muted); letter-spacing: .1em; text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .tb-items { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .tb-sep { color: rgba(255,255,255,.15); font-size: .85rem; }
+    .tb-item {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--mono); font-size: .78rem; font-weight: 600;
+    }
+    .tb-item.laravel { color: #ff6b5b; }
+    .tb-item.vue     { color: #42b883; }
+    .tb-item.plain   { color: var(--muted); }
+
+    /* ─── HEX FLOAT ANIMATION ────────────────────────────────── */
+    @keyframes floatHex {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-10px) rotate(3deg); }
+    }
+
+    /* ─── SCROLL INDICATOR ───────────────────────────────────── */
+    .scroll-hint {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      font-family: var(--mono); font-size: .65rem; color: var(--muted);
+      letter-spacing: .08em; text-decoration: none;
+      animation: fadeUp .5s ease .8s both;
+      z-index: 2;
+    }
+    .scroll-hint-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, transparent, var(--blue));
+      animation: scrollLine 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ─── SERVICE CARD NUMBERS ───────────────────────────────── */
+    .svc-card { counter-increment: svc; }
+    .svc-num {
+      font-family: var(--mono); font-size: 2.2rem; font-weight: 700;
+      color: rgba(59,127,255,.08); line-height: 1;
+      position: absolute; top: 16px; right: 20px;
+      transition: color .3s;
+      user-select: none;
+    }
+    .svc-card { position: relative; }
+    .svc-card:hover .svc-num { color: rgba(59,127,255,.18); }
+
+    /* ─── BACK TO TOP ─────────────────────────────────────────── */
+    #backTop {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 40px; height: 40px; border-radius: 8px;
+      background: var(--bg-1); border: 1px solid rgba(59,127,255,.3);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; text-decoration: none;
+      opacity: 0; transform: translateY(12px);
+      transition: opacity .3s, transform .3s, border-color .2s, box-shadow .2s;
+      pointer-events: none;
+    }
+    #backTop.visible { opacity: 1; transform: none; pointer-events: all; }
+    #backTop:hover { border-color: var(--blue); box-shadow: 0 0 14px rgba(59,127,255,.2); }
+    #backTop .material-icons { color: var(--blue); font-size: 1.1rem; }
+
+    /* ─── FOOTER TERMINAL ─────────────────────────────────────── */
+    .footer-terminal {
+      background: #0d1117;
+      border-top: 1px solid rgba(59,127,255,.12);
+      padding: 10px 5%;
+      font-family: var(--mono); font-size: .72rem;
+      color: var(--muted);
+      display: flex; align-items: center; gap: 16px;
+      flex-wrap: wrap;
+    }
+    .ft-prompt { color: var(--green); }
+    .ft-cmd    { color: var(--text); }
+    .ft-ok     { color: var(--green); margin-left: auto; }
+    .ft-blink  {
+      display: inline-block; width: 7px; height: 12px;
+      background: var(--blue); border-radius: 1px; margin-left: 3px;
+      vertical-align: middle;
+      animation: cur .9s step-end infinite;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      padding: 24px 5%; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-brand { font-family: var(--mono); font-size: .9rem; font-weight: 700; color: var(--text); }
+    .footer-brand em { color: var(--blue); font-style: normal; }
+    .footer-copy { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+    .footer-icons { display: flex; gap: 8px; }
+    .footer-icon {
+      width: 34px; height: 34px; border-radius: 7px;
+      background: var(--bg-1); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; transition: border-color .2s, background .2s;
+    }
+    .footer-icon .material-icons { color: var(--muted); font-size: .95rem; }
+    .footer-icon:hover { border-color: rgba(59,127,255,.3); background: var(--blue-dim); }
+    .footer-icon:hover .material-icons { color: var(--blue); }
+
+    /* ─── RIPPLE ──────────────────────────────────────────────── */
+    .rpl { position: relative; overflow: hidden; }
+    .rpl-wave {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      background: rgba(255,255,255,.18); transform: scale(0);
+      animation: rpl .5s linear;
+    }
+    @keyframes rpl { to { transform: scale(4); opacity: 0; } }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-btn-wrap { display: none; }
+      .hamburger { display: flex; }
+      nav.open .nav-links {
+        display: flex; flex-direction: column;
+        position: fixed; top: 62px; left: 0; right: 0;
+        background: rgba(17,19,24,.97); padding: 20px 5% 28px; gap: 4px;
+        border-bottom: 1px solid var(--border);
+      }
+      section { padding: 72px 5%; }
+      .form-row2 { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 14px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#accueil" class="nav-brand">N<em>.</em>dev</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-btn-wrap">
+      <a href="#contact" class="btn-term rpl">Me contacter</a>
+    </div>
+    <button class="hamburger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="accueil">
+  <div class="hero-grid">
+
+    <!-- Col 1 — Texte -->
+    <div>
+      <div class="hero-status fade"><div class="status-dot"></div>Disponible pour de nouveaux projets</div>
+      <h1 class="hero-title fade d1">Bonjour,<br>je suis <span class="hi">Narindra</span><br><span class="ghost">Fullstack Dev</span></h1>
+      <p class="hero-body fade d2">Développeur passionné basé à Antananarivo — je conçois des applications web et mobile modernes, performantes et alignées sur vos objectifs.</p>
+
+      <div class="hero-actions fade d4">
+        <a href="#projets" class="btn-term rpl">Voir mes projets</a>
+        <a href="#contact" class="btn-ghost">Me contacter</a>
+      </div>
+    </div>
+
+    <!-- Col 2 — Fenêtre mac animée + décos -->
+    <div class="fade d2 hero-mac-wrap" style="position:relative">
+
+      <!-- Hexagones décoratifs Vue.js -->
+      <div class="hex-deco" style="top:-30px;right:-20px;animation:floatHex 6s ease-in-out infinite">
+        <svg width="80" height="92" viewBox="0 0 80 92"><polygon points="40,2 78,22 78,70 40,90 2,70 2,22" fill="none" stroke="#42b883" stroke-width="1.5"/></svg>
+      </div>
+      <div class="hex-deco" style="bottom:-20px;left:-24px;animation:floatHex 8s ease-in-out infinite reverse;opacity:.04">
+        <svg width="55" height="63" viewBox="0 0 55 63"><polygon points="27.5,2 53,16 53,47 27.5,61 2,47 2,16" fill="none" stroke="#42b883" stroke-width="1.5"/></svg>
+      </div>
+      <!-- Déco Laravel -->
+      <div class="hex-deco" style="bottom:30px;right:-28px;animation:floatHex 7s ease-in-out 1s infinite;opacity:.05">
+        <svg width="50" height="50" viewBox="0 0 50 52"><path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01a.816.816 0 0 1-.747 0l-19.221-11.06A.8.8 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21a.809.809 0 0 1 .138-.288l.012-.016a.8.8 0 0 1 .232-.19L10.028.082a.8.8 0 0 1 .8 0l9.618 5.538a.809.809 0 0 1 .38.694v21.363l8.007-4.614V11.773a.8.8 0 0 1 .4-.694l9.618-5.538a.8.8 0 0 1 .8 0l9.618 5.538a.8.8 0 0 1 .318.495z" fill="#ff4433"/></svg>
+      </div>
+
+      <div class="mac-win" style="position:relative">
+        <div class="mac-bar" style="justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div class="mac-dots">
+              <div class="mac-dot r"></div>
+              <div class="mac-dot y"></div>
+              <div class="mac-dot g"></div>
+            </div>
+            <span class="mac-file">narindra.json</span>
+          </div>
+          <span id="liveClock" style="font-family:var(--mono);font-size:.68rem;color:rgba(255,255,255,.25)"></span>
+        </div>
+        <div class="mac-body" style="font-family:var(--mono)">
+          <div class="t-line"><span class="t-comment">// Développeur Fullstack · Madagascar</span></div>
+          <div class="t-blank"></div>
+          <div class="t-line"><span class="t-brace">{</span></div>
+          <div class="t-line indent"><span class="t-key">"nom"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"Narindra RAZAFIMANDIMBY"</span><span class="t-eq">,</span></div>
+          <div class="t-line indent"><span class="t-key">"contact"</span><span class="t-eq">:</span>&nbsp;<span class="t-brace">{</span></div>
+          <div class="t-line indent" style="padding-left:36px"><span class="t-key">"tel"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"+261 34 36 451 86"</span><span class="t-eq">,</span></div>
+          <div class="t-line indent" style="padding-left:36px"><span class="t-key">"email"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"narindrandimby2@gmail.com"</span></div>
+          <div class="t-line indent"><span class="t-brace">}</span><span class="t-eq">,</span></div>
+          <div class="t-line indent"><span class="t-key">"job"</span><span class="t-eq">:</span>&nbsp;<span class="t-brace">{</span></div>
+          <div class="t-line indent" style="padding-left:36px"><span class="t-key">"role"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"Fullstack Developer"</span><span class="t-eq">,</span></div>
+          <div class="t-line indent" style="padding-left:36px"><span class="t-key">"stack"</span><span class="t-eq">:</span>&nbsp;<span class="t-brace">[</span><span class="t-str" style="color:#ff6b5b">"Laravel"</span><span class="t-eq">,</span> <span class="t-str" style="color:#42b883">"Vue.js"</span><span class="t-eq">,</span> <span class="t-str" style="color:#7aabff">"PHP"</span><span class="t-brace">]</span><span class="t-eq">,</span></div>
+          <div class="t-line indent" style="padding-left:36px"><span class="t-key">"experience"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"5+ ans"</span></div>
+          <div class="t-line indent"><span class="t-brace">}</span></div>
+          <div class="t-line"><span class="t-brace">}</span>&nbsp;<span class="bc-cur" style="animation-delay:2s"></span></div>
+          <div class="mac-stats">
+            <div class="mac-stat"><div class="mac-stat-n green" id="cnt-projets">8+</div><div class="mac-stat-l">Projets terminés</div></div>
+            <div class="mac-stat"><div class="mac-stat-n orange" id="cnt-clients">5+</div><div class="mac-stat-l">Clients satisfaits</div></div>
+            <div class="mac-stat"><div class="mac-stat-n blue" id="cnt-years">5+</div><div class="mac-stat-l">Années</div></div>
+          </div>
+          <div class="chips">
+            <span class="chip" style="background:rgba(59,127,255,.15);border-color:rgba(59,127,255,.35);color:#7aabff;font-weight:600">PHP</span>
+            <span class="chip" style="background:rgba(255,68,51,.1);border-color:rgba(255,68,51,.25);color:#ff6b5b">Laravel</span>
+            <span class="chip" style="background:rgba(66,184,131,.1);border-color:rgba(66,184,131,.25);color:#42b883">Vue.js</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">InertiaJS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <a href="#competences" class="scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-hint-line"></div>
+  </a>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ COMPÉTENCES ═══ -->
+<section id="competences">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="breadcrumb fade">
+        <span class="bc-root">~/</span><span class="bc-sep">/</span>
+        <span class="bc-dir">narindra</span><span class="bc-sep">/</span>
+        <span class="bc-file">skills.config</span><span class="bc-cur"></span>
+      </div>
+      <h2 class="sec-title fade d1">Compétences Techniques</h2>
+      <p class="sec-lead fade d2">Un stack complet pour couvrir frontend, backend, mobile et infrastructure cloud.</p>
+    </div>
+    <div class="mac-win fade d2">
+      <div class="mac-bar">
+        <div class="mac-dots"><div class="mac-dot r"></div><div class="mac-dot y"></div><div class="mac-dot g"></div></div>
+        <span class="mac-file">skills.config — Narindra Dev</span>
+      </div>
+      <div class="mac-body">
+        <div class="skills-grid">
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">PHP</span><span class="skill-pct">96%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="96"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">96%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="96"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">HTML / CSS</span><span class="skill-pct">96%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="96"></div></div>
+          </div>
+          <div class="skill-row sk-laravel">
+            <div class="skill-top"><span class="skill-name">Laravel</span><span class="skill-pct">95%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">MySQL / MariaDB</span><span class="skill-pct">95%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">Bootstrap</span><span class="skill-pct">95%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="95"></div></div>
+          </div>
+          <div class="skill-row sk-vue">
+            <div class="skill-top"><span class="skill-name">Vue.js</span><span class="skill-pct">90%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">InertiaJS</span><span class="skill-pct">90%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">jQuery</span><span class="skill-pct">89%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="89"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">Mobile Cross-Platform</span><span class="skill-pct">85%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">TypeScript</span><span class="skill-pct">80%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="80"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-top"><span class="skill-name">CI/CD — GitHub / GitLab</span><span class="skill-pct">88%</span></div>
+            <div class="progress"><div class="progress-bar" data-w="88"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="breadcrumb fade">
+        <span class="bc-root">~/</span><span class="bc-sep">/</span>
+        <span class="bc-dir">narindra</span><span class="bc-sep">/</span>
+        <span class="bc-file">services.json</span><span class="bc-cur"></span>
+      </div>
+      <h2 class="sec-title fade d1">Ce que je propose</h2>
+      <p class="sec-lead fade d2">Des solutions sur mesure, robustes et performantes — du design à la mise en production.</p>
+    </div>
+    <div class="mac-win fade d2">
+      <div class="mac-bar">
+        <div class="mac-dots"><div class="mac-dot r"></div><div class="mac-dot y"></div><div class="mac-dot g"></div></div>
+        <span class="mac-file">services.json — Narindra Dev</span>
+      </div>
+      <div class="mac-body">
+        <div class="svc-grid">
+          <div class="svc-card">
+            <div class="svc-num">01</div>
+            <div class="svc-icon"><span class="material-icons">language</span></div>
+            <div class="svc-title">Application Web</div>
+            <p class="svc-text">Développement complet : backend robuste, frontend moderne, design responsive et expérience utilisateur soignée.</p>
+          </div>
+          <div class="svc-card">
+            <div class="svc-num">02</div>
+            <div class="svc-icon"><span class="material-icons">smartphone</span></div>
+            <div class="svc-title">Application Mobile</div>
+            <p class="svc-text">Applications cross-platform modernes, rapides et fluides, adaptées à vos utilisateurs iOS & Android.</p>
+          </div>
+          <div class="svc-card">
+            <div class="svc-num">03</div>
+            <div class="svc-icon"><span class="material-icons">business_center</span></div>
+            <div class="svc-title">ERP & CRM</div>
+            <p class="svc-text">Centralisation des données, gestion RH, suivi des tâches, reporting — un atout stratégique pour votre entreprise.</p>
+          </div>
+          <div class="svc-card">
+            <div class="svc-num">04</div>
+            <div class="svc-icon"><span class="material-icons">cable</span></div>
+            <div class="svc-title">Intégration API</div>
+            <p class="svc-text">Connexion de services tiers, passerelles de paiement (Stripe, PayPal), systèmes d'abonnement et APIs REST.</p>
+          </div>
+          <div class="svc-card">
+            <div class="svc-num">05</div>
+            <div class="svc-icon"><span class="material-icons">rocket_launch</span></div>
+            <div class="svc-title">Déploiement</div>
+            <p class="svc-text">Configuration serveur, pipelines CI/CD sur GitHub & GitLab, mise en production fiable et automatisée.</p>
+          </div>
+          <div class="svc-card">
+            <div class="svc-num">06</div>
+            <div class="svc-icon"><span class="material-icons">build</span></div>
+            <div class="svc-title">Maintenance</div>
+            <p class="svc-text">Débogage, rénovation de code legacy, optimisation des performances et suivi continu de vos projets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PROJETS ═══ -->
+<section id="projets" style="background:var(--bg-1)">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="breadcrumb fade">
+        <span class="bc-root">~/</span><span class="bc-sep">/</span>
+        <span class="bc-dir">narindra</span><span class="bc-sep">/</span>
+        <span class="bc-dir">projects</span><span class="bc-sep">/</span>
+        <span class="bc-file">README.md</span><span class="bc-cur"></span>
+      </div>
+      <h2 class="sec-title fade d1">Mes Projets</h2>
+      <p class="sec-lead fade d2">Une sélection de projets concrets livrés pour des clients satisfaits. Cliquez sur une image pour voir le détail.</p>
+    </div>
+    <div class="mac-win fade d2">
+      <div class="mac-bar">
+        <div class="mac-dots"><div class="mac-dot r"></div><div class="mac-dot y"></div><div class="mac-dot g"></div></div>
+        <span class="mac-file">projects/ — Narindra Dev</span>
+      </div>
+      <div class="mac-body">
+        <div class="pgal-grid">
+
+          <div class="pgal-card" onclick="openLightbox(0)">
+            <div class="pgal-img-wrap">
+              <img src="images/erp-15.PNG" alt="Plateforme ERP" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">ERP / CRM</span>
+              <div class="pgal-title">Plateforme ERP complète</div>
+              <p class="pgal-desc">Gestion intégrée : RH, congés, planning, stock, tâches, statistiques et reporting automatisé.</p>
+            </div>
+          </div>
+
+          <div class="pgal-card" onclick="openLightbox(1)">
+            <div class="pgal-img-wrap">
+              <img src="images/erp-4.PNG" alt="ERP Collaborateurs" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">ERP / CRM</span>
+              <div class="pgal-title">Gestion Collaborateurs</div>
+              <p class="pgal-desc">Module RH avancé : fiches employés, pointage, congés, contrats et suivi des performances.</p>
+            </div>
+          </div>
+
+          <div class="pgal-card" onclick="openLightbox(2)">
+            <div class="pgal-img-wrap">
+              <img src="images/erp-453.PNG" alt="ERP Congés" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">ERP / CRM</span>
+              <div class="pgal-title">Planning & Congés</div>
+              <p class="pgal-desc">Planification des absences, validation automatique et suivi en temps réel des demandes de congé.</p>
+            </div>
+          </div>
+
+          <div class="pgal-card" onclick="openLightbox(3)">
+            <div class="pgal-img-wrap">
+              <img src="images/erp-5.PNG" alt="ERP Tâches" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">ERP / CRM</span>
+              <div class="pgal-title">Gestion des Tâches</div>
+              <p class="pgal-desc">Tableau Kanban interactif, assignation d'équipe, priorités et suivi d'avancement des projets.</p>
+            </div>
+          </div>
+
+          <div class="pgal-card" onclick="openLightbox(4)">
+            <div class="pgal-img-wrap">
+              <img src="images/erp-18.PNG" alt="ERP Rapport" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">ERP / CRM</span>
+              <div class="pgal-title">Rapports & Statistiques</div>
+              <p class="pgal-desc">Dashboard analytique avec graphiques dynamiques, exports PDF/Excel et indicateurs clés.</p>
+            </div>
+          </div>
+
+          <div class="pgal-card" onclick="openLightbox(5)">
+            <div class="pgal-img-wrap">
+              <img src="images/erp-45.PNG" alt="ERP Paie" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">ERP / CRM</span>
+              <div class="pgal-title">Module Paie & Budget</div>
+              <p class="pgal-desc">Calcul automatique des salaires, bulletins de paie, suivi budgétaire et coûts par département.</p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(6)">
+            <div class="pgal-img-wrap">
+              <img src="images/echo-6.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">App web</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(7)">
+            <div class="pgal-img-wrap">
+              <img src="/images/echo-1.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">App web</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(8)">
+            <div class="pgal-img-wrap">
+              <img src="images/echo-3.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">App web</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(9)">
+            <div class="pgal-img-wrap">
+              <img src="images/echo-12.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">App web</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(10)">
+            <div class="pgal-img-wrap">
+              <img src="images/echo-4.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">Backend + Systeme d'abonnement. </span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(11)">
+            <div class="pgal-img-wrap">
+              <img src="images/echo-7.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">Backend + Système de paiement.</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(12)">
+            <div class="pgal-img-wrap">
+              <img src="images/echo-8.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">Backend + Facturation automatique.</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(13)">
+            <div class="pgal-img-wrap">
+              <img src="images/echo-8.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">Backend : API, IA, ... </span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(14)">
+            <div class="pgal-img-wrap">
+              <img src="images/afr-1.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">Réseaux sociaux en Afrique  </span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(15)">
+            <div class="pgal-img-wrap">
+              <img src="images/afr-2.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">App web + Systeme d'abonnement.  </span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(15)">
+            <div class="pgal-img-wrap">
+              <img src="images/afr-3.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">App web + Chat + Post + Followers + ...   </span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(15)">
+            <div class="pgal-img-wrap">
+              <img src="images/afr-4.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">App web + systeme paiement par carte VISA et Mastercard</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(15)">
+            <div class="pgal-img-wrap">
+              <img src="images/h-1.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">Gestion de file d'attente</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+          <div class="pgal-card" onclick="openLightbox(16)">
+            <div class="pgal-img-wrap">
+              <img src="images/h-1.PNG" alt="App web" onerror="this.parentElement.classList.add('img-err')" />
+              <div class="pgal-overlay">
+                <span class="material-icons">zoom_in</span>
+              </div>
+            </div>
+            <div class="pgal-info">
+              <span class="proj-tag">Gestion de file d'attente</span>
+              <div class="pgal-title"></div>
+              <p class="pgal-desc"> </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div id="lightbox" onclick="closeLightbox(event)">
+  <div class="lb-container">
+    <button class="lb-close" onclick="closeLightbox()"><span class="material-icons">close</span></button>
+    <button class="lb-nav lb-prev" onclick="lbNav(-1);event.stopPropagation()"><span class="material-icons">chevron_left</span></button>
+    <button class="lb-nav lb-next" onclick="lbNav(1);event.stopPropagation()"><span class="material-icons">chevron_right</span></button>
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="" />
+    </div>
+    <div class="lb-caption">
+      <span class="lb-tag" id="lbTag"></span>
+      <div class="lb-title" id="lbTitle"></div>
+      <div class="lb-desc" id="lbDesc"></div>
+      <div class="lb-counter"><span id="lbCur">1</span> / <span id="lbTotal">6</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══ TÉMOIGNAGES ═══ -->
+<section id="temoignages" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="breadcrumb fade">
+        <span class="bc-root">~/</span><span class="bc-sep">/</span>
+        <span class="bc-dir">narindra</span><span class="bc-sep">/</span>
+        <span class="bc-dir">reviews</span><span class="bc-sep">/</span>
+        <span class="bc-file">clients.log</span><span class="bc-cur"></span>
+      </div>
+      <h2 class="sec-title fade d1">Ils me font confiance</h2>
+      <p class="sec-lead fade d2">Des retours clients qui me motivent chaque jour à donner le meilleur.</p>
+    </div>
+    <div class="mac-win fade d2">
+      <div class="mac-bar">
+        <div class="mac-dots"><div class="mac-dot r"></div><div class="mac-dot y"></div><div class="mac-dot g"></div></div>
+        <span class="mac-file">clients.log — Narindra Dev</span>
+      </div>
+      <div class="mac-body">
+        <div class="testi-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Narindra est un développeur fullstack de haut niveau, capable de développer des fonctionnalités complexes en un temps record. Travailler avec lui fut un vrai plaisir — je le recommande sans hésitation.</p>
+            <div class="testi-author">
+              <div class="testi-ava">
+                <img src="https://api.dicebear.com/8.x/avataaars/png?seed=TomTaieb&backgroundColor=b6e3f4&radius=50" alt="Tom Taieb" />
+              </div>
+              <div>
+                <div class="testi-name">Tom Taieb</div>
+                <div class="testi-role">CEO — Irok.fr</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">À la fois passionné, dévoué et très généreux de son temps, Narindra est la personne clé que je recommande pour mener à bien votre projet technique.</p>
+            <div class="testi-author">
+              <div class="testi-ava">
+                <img src="https://api.dicebear.com/8.x/avataaars/png?seed=TojoRama&backgroundColor=c0aede&radius=50" alt="Tojo RAMA" />
+              </div>
+              <div>
+                <div class="testi-name">Tojo RAMA</div>
+                <div class="testi-role">Fondateur — TIRIEL</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Il comprend rapidement mes besoins et livre un projet fonctionnel, clair et fiable. Le résultat a parfaitement répondu à mes attentes, dans les délais impartis.</p>
+            <div class="testi-author">
+              <div class="testi-ava">
+                <img src="https://api.dicebear.com/8.x/avataaars/png?seed=MdHarisoa&backgroundColor=d1d4f9&radius=50" alt="Md Harisoa" />
+              </div>
+              <div>
+                <div class="testi-name">Md Harisoa</div>
+                <div class="testi-role">CEO — Dessinéo</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">Je conseille vivement le travail de Narindra pour une expérience technique sans faille. Un soutien précieux du début à la fin, toujours disponible et professionnel.</p>
+            <div class="testi-author">
+              <div class="testi-ava">
+                <img src="https://api.dicebear.com/8.x/avataaars/png?seed=AlexisMariani&backgroundColor=ffd5dc&radius=50" alt="Alexis Mariani" />
+              </div>
+              <div>
+                <div class="testi-name">Alexis Mariani</div>
+                <div class="testi-role">Président — Fanrhythm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" style="background:var(--bg-1)">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="breadcrumb fade">
+        <span class="bc-root">~/</span><span class="bc-sep">/</span>
+        <span class="bc-dir">narindra</span><span class="bc-sep">/</span>
+        <span class="bc-file">contact.sh</span><span class="bc-cur"></span>
+      </div>
+      <h2 class="sec-title fade d1">Vous avez un projet ?</h2>
+      <p class="sec-lead fade d2">Démarrons ensemble. Disponible pour des missions freelance, des collaborations ou simplement échanger sur votre idée.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="mac-win fade">
+        <div class="mac-bar">
+          <div class="mac-dots"><div class="mac-dot r"></div><div class="mac-dot y"></div><div class="mac-dot g"></div></div>
+          <span class="mac-file">coordonnees.json — Narindra Dev</span>
+        </div>
+        <div class="contact-info-head" style="background:rgba(255,255,255,.03);padding:16px 20px">
+          <h3>Coordonnées</h3>
+          <p>Réponse sous 24h</p>
+        </div>
+        <a href="tel:+261343645186" class="c-item">
+          <div class="c-icon"><span class="material-icons">phone</span></div>
+          <div><div class="c-label">WhatsApp / Téléphone</div><div class="c-val">+261 34 36 451 86</div></div>
+        </a>
+        <a href="mailto:narindrandimby2@gmail.com" class="c-item">
+          <div class="c-icon"><span class="material-icons">email</span></div>
+          <div><div class="c-label">Email</div><div class="c-val">narindrandimby2@gmail.com</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/narindra-razafimandimby" target="_blank" class="c-item">
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#7aabff"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div><div class="c-label">LinkedIn</div><div class="c-val">narindra-razafimandimby</div></div>
+        </a>
+      </div>
+
+      <div class="mac-win fade d1">
+        <div class="mac-bar">
+          <div class="mac-dots"><div class="mac-dot r"></div><div class="mac-dot y"></div><div class="mac-dot g"></div></div>
+          <span class="mac-file">message.send — Narindra Dev</span>
+        </div>
+        <div class="mac-body">
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row2">
+              <div class="form-field">
+                <input type="text" id="fn" placeholder=" " required />
+                <label for="fn">Votre nom</label>
+              </div>
+              <div class="form-field">
+                <input type="email" id="fe" placeholder=" " required />
+                <label for="fe">Email</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <input type="text" id="fs" placeholder=" " />
+              <label for="fs">Sujet</label>
+            </div>
+            <div class="form-field">
+              <textarea id="fm" rows="5" placeholder=" " required></textarea>
+              <label for="fm">Message</label>
+            </div>
+            <button type="submit" class="btn-submit rpl" id="submitBtn">Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK TO TOP -->
+<a href="#accueil" id="backTop">
+  <span class="material-icons">keyboard_arrow_up</span>
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">N<em>.</em>dev</div>
+    <div class="footer-copy">© 2025 Narindra RAZAFIMANDIMBY — Développeur Fullstack</div>
+  </div>
+  <div class="footer-icons">
+    <a href="mailto:narindrandimby2@gmail.com" class="footer-icon"><span class="material-icons">email</span></a>
+    <a href="tel:+261343645186" class="footer-icon"><span class="material-icons">chat</span></a>
+    <a href="https://www.linkedin.com/in/narindra-razafimandimby" target="_blank" class="footer-icon">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color:var(--muted)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="#" class="footer-icon"><span class="material-icons">code</span></a>
+  </div>
+</footer>
+<div class="footer-terminal">
+  <span class="ft-prompt">narindra@dev</span>
+  <span style="color:rgba(255,255,255,.2)">~$</span>
+  <span class="ft-cmd">git status</span>
+  <span style="color:var(--muted)">·</span>
+  <span style="color:#ffa657">On branch</span>
+  <span class="ft-cmd">main</span>
+  <span style="color:var(--muted)">·</span>
+  <span style="color:var(--green)">✓ portfolio deployed</span>
+  <span class="ft-ok">ready<span class="ft-blink"></span></span>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // NAV scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50), {passive:true});
+
+  // Hamburger
+  document.getElementById('burger').addEventListener('click', () => nav.classList.toggle('open'));
+
+  // Active nav link
+  const secs = document.querySelectorAll('section[id]');
+  const lnks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (scrollY >= s.offsetTop - 140) cur = s.id; });
+    lnks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  }, {passive:true});
+
+  // Live clock in hero mac bar
+  function updateClock() {
+    const el = document.getElementById('liveClock');
+    if (!el) return;
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    el.textContent = `${h}:${m}:${s}`;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // Count-up animation for hero stats
+  function countUp(el, target, duration) {
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { start = target; clearInterval(timer); }
+      el.textContent = Math.floor(start) + '+';
+    }, 16);
+  }
+  setTimeout(() => {
+    countUp(document.getElementById('cnt-projets'), 8,  800);
+    countUp(document.getElementById('cnt-clients'), 5,  600);
+    countUp(document.getElementById('cnt-years'),   5,  800);
+  }, 2200);
+  // Back to top
+  const btt = document.getElementById('backTop');
+  window.addEventListener('scroll', () => btt.classList.toggle('visible', scrollY > 400), {passive:true});
+
+  function runBars() {
+    document.querySelectorAll('.progress-bar[data-w]').forEach(b => {
+      b.style.width = b.dataset.w + '%';
+    });
+  }
+  // Multiple triggers to ensure bars animate regardless of scroll/load state
+  setTimeout(runBars, 100);
+  setTimeout(runBars, 600);
+  setTimeout(runBars, 1200);
+  window.addEventListener('load', () => setTimeout(runBars, 200));
+  window.addEventListener('scroll', runBars, {once:true});
+
+  // Ripple
+  document.querySelectorAll('.rpl').forEach(el => {
+    el.addEventListener('click', function(e) {
+      const w = document.createElement('span');
+      w.classList.add('rpl-wave');
+      const sz = Math.max(this.offsetWidth, this.offsetHeight);
+      const rc = this.getBoundingClientRect();
+      w.style.cssText = `width:${sz}px;height:${sz}px;left:${e.clientX-rc.left-sz/2}px;top:${e.clientY-rc.top-sz/2}px`;
+      this.appendChild(w);
+      setTimeout(() => w.remove(), 600);
+    });
+  });
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = '✓ Message envoyé !';
+    btn.style.color = '#22c55e';
+    btn.style.borderColor = 'rgba(34,197,94,.4)';
+    setTimeout(() => {
+      btn.textContent = 'Envoyer le message';
+      btn.style.color = ''; btn.style.borderColor = ''; btn.disabled = false;
+      e.target.reset();
+    }, 3000);
+  }
+
+  // ─── LIGHTBOX ─────────────────────────────────────────────
+  const lbProjects = [
+    { img: 'https://narindra.vercel.app/images/projects/erp1.png', tag: 'ERP / CRM', title: 'Plateforme ERP complète', desc: 'Gestion intégrée : RH, congés, planning, stock, tâches, statistiques et reporting automatisé.' },
+    { img: 'https://narindra.vercel.app/images/projects/erp2.png', tag: 'ERP / CRM', title: 'Gestion Collaborateurs', desc: 'Module RH avancé : fiches employés, pointage, congés, contrats et suivi des performances.' },
+    { img: 'https://narindra.vercel.app/images/projects/erp3.png', tag: 'ERP / CRM', title: 'Planning & Congés', desc: 'Planification des absences, validation automatique et suivi en temps réel des demandes.' },
+    { img: 'https://narindra.vercel.app/images/projects/erp4.png', tag: 'ERP / CRM', title: 'Gestion des Tâches', desc: 'Tableau Kanban interactif, assignation d\'équipe, priorités et suivi d\'avancement.' },
+    { img: 'https://narindra.vercel.app/images/projects/erp5.png', tag: 'ERP / CRM', title: 'Rapports & Statistiques', desc: 'Dashboard analytique avec graphiques dynamiques, exports PDF/Excel et indicateurs clés.' },
+    { img: 'https://narindra.vercel.app/images/projects/erp6.png', tag: 'ERP / CRM', title: 'Module Paie & Budget', desc: 'Calcul automatique des salaires, bulletins de paie, suivi budgétaire par département.' },
+  ];
+  let lbIndex = 0;
+
+  function openLightbox(i) {
+    lbIndex = i;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lb-close') && !e.target.parentElement?.classList.contains('lb-close')) return;
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function lbNav(dir) {
+    lbIndex = (lbIndex + dir + lbProjects.length) % lbProjects.length;
+    updateLightbox();
+  }
+  function updateLightbox() {
+    const p = lbProjects[lbIndex];
+    document.getElementById('lbImg').src = p.img;
+    document.getElementById('lbImg').alt = p.title;
+    document.getElementById('lbTag').textContent = p.tag;
+    document.getElementById('lbTitle').textContent = p.title;
+    document.getElementById('lbDesc').textContent = p.desc;
+    document.getElementById('lbCur').textContent = lbIndex + 1;
+    document.getElementById('lbTotal').textContent = lbProjects.length;
+  }
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowRight') lbNav(1);
+    if (e.key === 'ArrowLeft')  lbNav(-1);
+    if (e.key === 'Escape') { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+  });
+
+</script>
+</body>
+</html>
