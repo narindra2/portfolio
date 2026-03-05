@@ -1552,9 +1552,9 @@
               <textarea  name="message" id="message" rows="5" placeholder=" " required></textarea>
               <label for="fm">Message</label>
             </div>
-            <div class="form-field" id="success-message" style="dispaly:none">
-             	<span style="color:var(--green)" >Message bien envoyé</span>
-            </div>
+            
+             	<span id="success-message"  style="color:var(--green)" ></span>
+           
             <button type="submit" class="btn-submit rpl" id="submitBtn">Envoyer le message</button>
           </form>
         </div>
@@ -1679,21 +1679,23 @@
 	var submitButton = _this.querySelector('button[type="submit"]');
 	const msg = document.getElementById('success-message');
 	submitButton.disabled = true;
-	msg.style.display = 'block';
+
+
 
 // Masquer après 5 secondes
 
 		// Envoie le formulaire via emailjs une fois que le token est en place
 		emailjs.sendForm('service_o4shucm', 'template_1xy1pdx', _this)
 			.then(function() {
+				successMessage.innerHTML = 'Message envoyé avec succès';
 				setTimeout(() => {
-				  msg.style.display = 'none';
+				  successMessage.innerHTML = '';
 				}, 5000);
 				setTimeout(function() {
 					document.getElementById('message').value = "";
 					document.getElementById('subject').value = "";
 					document.getElementById('to_name').value = "";
-					document.getElementById('success-message'). = "";
+					
 				}, 1500);
 			}, function(error) {
 				console.log(error);
