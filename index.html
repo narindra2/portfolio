@@ -835,24 +835,49 @@
     }
     @keyframes rpl { to { transform: scale(4); opacity: 0; } }
 
-    /* ─── RESPONSIVE ──────────────────────────────────────────── */
-    @media (max-width: 960px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
-    }
-    @media (max-width: 768px) {
-      .nav-links, .nav-btn-wrap { display: none; }
-      .hamburger { display: flex; }
-      nav.open .nav-links {
-        display: flex; flex-direction: column;
-        position: fixed; top: 62px; left: 0; right: 0;
-        background: rgba(17,19,24,.97); padding: 20px 5% 28px; gap: 4px;
-        border-bottom: 1px solid var(--border);
-      }
-      section { padding: 72px 5%; }
-      .form-row2 { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 14px; text-align: center; }
-    }
+    
+	  /* ─── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-btn-wrap { display: none; }
+  .hamburger { display: flex; }
+  nav.open .nav-links {
+    display: flex; flex-direction: column;
+    position: fixed; top: 62px; left: 0; right: 0;
+    background: rgba(17,19,24,.97); padding: 20px 5% 28px; gap: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  section { padding: 72px 5%; }
+  .form-row2 { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 14px; text-align: center; }
+  
+  /* Terminal JSON responsive */
+  .mac-body { padding: 16px 14px 18px; }
+  .t-line { font-size: .8rem; line-height: 1.9; gap: 4px; }
+  .t-line.indent { padding-left: 12px; }
+  .t-line.indent[style*="padding-left:36px"] { padding-left: 24px !important; }
+  .mac-stats { grid-template-columns: 1fr; gap: 1px; margin-top: 14px; }
+  .mac-stat { padding: 10px 8px; }
+  .mac-stat-n { font-size: 1.15rem; }
+  .mac-stat-l { font-size: .65rem; }
+  .chips { gap: 6px; margin-top: 12px; }
+  .chip { padding: 3px 9px; font-size: .68rem; }
+}
+
+@media (max-width: 480px) {
+  /* Terminal encore plus petit sur mobile */
+  .mac-body { padding: 12px 10px 14px; }
+  .t-line { font-size: .72rem; line-height: 1.8; }
+  .t-line.indent { padding-left: 8px; }
+  .t-line.indent[style*="padding-left:36px"] { padding-left: 16px !important; }
+  .mac-stat-n { font-size: 1rem; }
+  .mac-stat-l { font-size: .6rem; }
+  .chip { padding: 2px 8px; font-size: .65rem; }
+  .mac-file { font-size: .65rem; }
+}
   </style>
 </head>
 <body>
