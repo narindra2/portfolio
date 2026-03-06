@@ -299,22 +299,22 @@
                   inset 0 1px 0 rgba(255,255,255,.08);
     }
 
-    /* Typing lines — hidden then revealed */
-    .t-line { opacity: 0; animation: typeIn .3s ease forwards; }
-    .t-line:nth-child(1)  { animation-delay: .4s; }
-    .t-line:nth-child(2)  { animation-delay: .55s; }
-    .t-line:nth-child(3)  { animation-delay: .7s; }
-    .t-line:nth-child(4)  { animation-delay: .85s; }
-    .t-line:nth-child(5)  { animation-delay: 1.0s; }
-    .t-line:nth-child(6)  { animation-delay: 1.15s; }
-    .t-line:nth-child(7)  { animation-delay: 1.3s; }
-    .t-line:nth-child(8)  { animation-delay: 1.45s; }
-    .t-line:nth-child(9)  { animation-delay: 1.6s; }
-    .t-line:nth-child(10) { animation-delay: 1.75s; }
-    .t-line:nth-child(11) { animation-delay: 1.9s; }
-    .t-line:nth-child(12) { animation-delay: 2.05s; }
-    .t-line:nth-child(13) { animation-delay: 2.2s; }
-    .t-line:nth-child(14) { animation-delay: 2.35s; }
+    /* Typing lines — uniquement dans le hero mac */
+    #accueil .t-line { opacity: 0; animation: typeIn .3s ease forwards; }
+    #accueil .t-line:nth-child(1)  { animation-delay: .4s; }
+    #accueil .t-line:nth-child(2)  { animation-delay: .55s; }
+    #accueil .t-line:nth-child(3)  { animation-delay: .7s; }
+    #accueil .t-line:nth-child(4)  { animation-delay: .85s; }
+    #accueil .t-line:nth-child(5)  { animation-delay: 1.0s; }
+    #accueil .t-line:nth-child(6)  { animation-delay: 1.15s; }
+    #accueil .t-line:nth-child(7)  { animation-delay: 1.3s; }
+    #accueil .t-line:nth-child(8)  { animation-delay: 1.45s; }
+    #accueil .t-line:nth-child(9)  { animation-delay: 1.6s; }
+    #accueil .t-line:nth-child(10) { animation-delay: 1.75s; }
+    #accueil .t-line:nth-child(11) { animation-delay: 1.9s; }
+    #accueil .t-line:nth-child(12) { animation-delay: 2.05s; }
+    #accueil .t-line:nth-child(13) { animation-delay: 2.2s; }
+    #accueil .t-line:nth-child(14) { animation-delay: 2.35s; }
     @keyframes typeIn {
       from { opacity: 0; transform: translateX(-6px); }
       to   { opacity: 1; transform: none; }
@@ -402,22 +402,18 @@
     }
     .progress { height: 5px; background: rgba(255,255,255,.07); border-radius: 5px; overflow: hidden; }
 
-    /* ─── FIX BARRES DE PROGRESSION ─────────────────────────────
-       Le problème : les .t-line avaient opacity:0 + animation:typeIn
-       mais les .progress-bar héritaient aussi d'animations qui les cachaient.
-       Solution : reset complet sur .progress-bar, animation indépendante.
-    ─────────────────────────────────────────────────────────────── */
+    /* ─── BARRES DE PROGRESSION ──────────────────────────────── */
     .progress-bar {
       height: 100%;
       background: linear-gradient(90deg, var(--blue), #7aabff);
       border-radius: 5px;
       width: 0;
-      opacity: 1 !important;
-      animation: none !important;
       transition: width 1.4s cubic-bezier(.4,0,.2,1);
     }
     .skill-row.sk-laravel .progress-bar { background: linear-gradient(90deg, #ff4433, #ff8070); }
     .skill-row.sk-vue     .progress-bar { background: linear-gradient(90deg, #42b883, #7fd1aa); }
+    .mac-stats { opacity: 0; animation: fadeUp .5s ease 2.6s forwards !important; }
+    .chips     { opacity: 0; animation: fadeUp .5s ease 2.9s forwards !important; }
 
     /* ─── SERVICES ────────────────────────────────────────────── */
     #services { background: var(--bg); }
@@ -890,10 +886,10 @@
 
     <!-- Col 1 — Texte -->
     <div>
-      <!-- ── PHOTO PROFIL ── -->
-      <div class="fade" style="margin-bottom:28px;">
+      <!-- ── PHOTO + STATUT côte à côte ── -->
+      <div class="fade" style="display:flex;align-items:center;gap:22px;margin-bottom:28px;">
         <div style="
-          width:150px;height:150px;border-radius:50%;overflow:hidden;
+          width:150px;height:150px;border-radius:50%;overflow:hidden;flex-shrink:0;
           border:3px solid rgba(59,127,255,.5);
           box-shadow:0 0 0 8px rgba(59,127,255,.08),0 0 40px rgba(59,127,255,.25);
           background:var(--bg-2);
@@ -901,9 +897,8 @@
           <img src="images/narindra.jpeg" alt="Narindra RAZAFIMANDIMBY"
                style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
         </div>
+        <div class="hero-status" style="margin-bottom:0"><div class="status-dot"></div>Disponible pour de nouveaux projets</div>
       </div>
-
-      <div class="hero-status fade"><div class="status-dot"></div>Disponible pour de nouveaux projets</div>
       <h1 class="hero-title fade d1">Bonjour,<br>je suis <span class="hi">Narindra</span><br><span class="ghost">Fullstack Dev</span></h1>
       <p class="hero-body fade d2">Développeur passionné basé à Antananarivo — je conçois des applications web et mobile modernes, performantes et alignées sur vos objectifs.</p>
 
@@ -947,7 +942,7 @@
           <div class="t-line indent"><span class="t-key">"nom"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"Narindra RAZAFIMANDIMBY"</span><span class="t-eq">,</span></div>
           <div class="t-line indent"><span class="t-key">"contact"</span><span class="t-eq">:</span>&nbsp;<span class="t-brace">{</span></div>
           <div class="t-line indent" style="padding-left:36px"><span class="t-key">"tel"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"+261 34 36 451 86"</span><span class="t-eq">,</span></div>
-          <div class="t-line indent" style="padding-left:36px"><span class="t-key">"email"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"<a href="/cdn-cgi/l/narindrandimby2@gmail.com" class="__cf_email__" data-cfemail="1e707f6c77707a6c7f707a77737c672c5e79737f7772307d7173">narindrandimby2@gmail.com</a>"</span></div>
+          <div class="t-line indent" style="padding-left:36px"><span class="t-key">"email"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e707f6c77707a6c7f707a77737c672c5e79737f7772307d7173">[email&#160;protected]</a>"</span></div>
           <div class="t-line indent"><span class="t-brace">}</span><span class="t-eq">,</span></div>
           <div class="t-line indent"><span class="t-key">"job"</span><span class="t-eq">:</span>&nbsp;<span class="t-brace">{</span></div>
           <div class="t-line indent" style="padding-left:36px"><span class="t-key">"role"</span><span class="t-eq">:</span>&nbsp;<span class="t-str">"Fullstack Developer"</span><span class="t-eq">,</span></div>
@@ -993,7 +988,7 @@
       <h2 class="sec-title fade d1">Compétences Techniques</h2>
       <p class="sec-lead fade d2">Un stack complet pour couvrir frontend, backend et mobile</p>
     </div>
-    <div class="mac-win fade d2">
+    <div class="mac-win">
       <div class="mac-bar">
         <div class="mac-dots"><div class="mac-dot r"></div><div class="mac-dot y"></div><div class="mac-dot g"></div></div>
         <span class="mac-file">skills.config — Narindra Dev</span>
@@ -1002,51 +997,51 @@
         <div class="skills-grid">
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">PHP</span><span class="skill-pct">96%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="96"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="96" style="width:96%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">96%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="96"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="96" style="width:96%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">HTML / CSS</span><span class="skill-pct">96%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="96"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="96" style="width:96%"></div></div>
           </div>
           <div class="skill-row sk-laravel">
             <div class="skill-top"><span class="skill-name">Laravel</span><span class="skill-pct">95%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="95"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="95" style="width:95%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">MySQL / MariaDB</span><span class="skill-pct">95%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="95"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="95" style="width:95%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">Bootstrap</span><span class="skill-pct">95%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="95"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="95" style="width:95%"></div></div>
           </div>
           <div class="skill-row sk-vue">
             <div class="skill-top"><span class="skill-name">Vue.js</span><span class="skill-pct">90%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="90"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="90" style="width:90%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">InertiaJS</span><span class="skill-pct">90%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="90"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="90" style="width:90%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">jQuery</span><span class="skill-pct">89%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="89"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="89" style="width:89%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">Mobile Cross-Platform</span><span class="skill-pct">85%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="85"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="85" style="width:85%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">TypeScript</span><span class="skill-pct">80%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="80"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="80" style="width:80%"></div></div>
           </div>
           <div class="skill-row">
             <div class="skill-top"><span class="skill-name">CI/CD — GitHub / GitLab</span><span class="skill-pct">88%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="88"></div></div>
+            <div class="progress"><div class="progress-bar" data-w="88" style="width:88%"></div></div>
           </div>
         </div>
       </div>
@@ -1456,30 +1451,17 @@
   window.addEventListener('scroll', () => btt.classList.toggle('visible', scrollY > 400), {passive:true});
 
   // ─── BARRES DE PROGRESSION ────────────────────────────────
-  // Utilise IntersectionObserver pour animer au scroll
   function runBars() {
-    document.querySelectorAll('.progress-bar[data-w]').forEach(b => {
-      b.style.width = b.dataset.w + '%';
+    document.querySelectorAll('.progress-bar[data-w]').forEach(function(b) {
+      b.style.width = b.getAttribute('data-w') + '%';
     });
   }
-
-  // Observer pour déclencher quand la section skills est visible
-  const skillsSection = document.getElementById('competences');
-  if (skillsSection) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTimeout(runBars, 200);
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.1 });
-    observer.observe(skillsSection);
-  }
-
-  // Fallback : animer au chargement aussi
-  window.addEventListener('load', () => setTimeout(runBars, 300));
-  setTimeout(runBars, 800);
+  // Lancer dès que possible + multiples fallbacks
+  document.addEventListener('DOMContentLoaded', function() { setTimeout(runBars, 100); });
+  window.addEventListener('load', function() { setTimeout(runBars, 200); setTimeout(runBars, 800); });
+  setTimeout(runBars, 500);
+  setTimeout(runBars, 1500);
+  window.addEventListener('scroll', runBars, {once: true});
 
   // Ripple
   document.querySelectorAll('.rpl').forEach(el => {
