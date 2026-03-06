@@ -1598,7 +1598,10 @@
 <footer>
   <div>
     <div class="footer-brand">Narindra<em>.</em>dev</div>
-    <div class="footer-copy">© 2025 Narindra RAZAFIMANDIMBY — Développeur Fullstack</div>
+	  	<div class="footer-copy">© <span id="currentYear"></span> Narindra RAZAFIMANDIMBY — Développeur Fullstack</div>
+		<script>
+		  document.getElementById('currentYear').textContent = new Date().getFullYear();
+		</script>
   </div>
   <div class="footer-icons">
     <a href="mailto:narindrandimby2@gmail.com" class="footer-icon"><span class="material-icons">email</span></a>
