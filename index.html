@@ -1568,4 +1568,19 @@
     document.getElementById('lbImg').alt = p.title;
     document.getElementById('lbTag').textContent = p.tag;
     document.getElementById('lbTitle').textContent = p.title;
-    document.getElementById('lbDes
+    document.getElementById('lbDesc').textContent = p.desc;
+    document.getElementById('lbCur').textContent = lbIndex + 1;
+    document.getElementById('lbTotal').textContent = lbProjects.length;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowRight') lbNav(1);
+    if (e.key === 'ArrowLeft')  lbNav(-1);
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+</body>
+</html>
