@@ -1492,14 +1492,14 @@
         .then(data => {
           emailjs.send('service_o4shucm', 'template_1xy1pdx', {
             to_name: 'Visiteur', from_name: 'Notification de visite',
-            message: 'Nouvelle visite détectée sur votre portfolio',
+            message: 'Nouvelle visite détectée sur le portfolio',
             subject: 'Nouvelle visite sur votre portfolio',
             visitor_ip: data.ip, visitor_os: os,
             visit_date: new Date().toLocaleString('fr-FR'),
             visit_url: window.location.href, browser: navigator.userAgent
           });
         }).catch(() => {});
-    }, 2000);
+    }, 2500);
   })();
 
   // Form submit
