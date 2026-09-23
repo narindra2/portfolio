@@ -44,7 +44,43 @@
         <img src="images/narindra.jpeg" alt="Portrait de Narindra" width="46" height="46" />
         <span>Développeur fullstack · Madagascar</span>
       </div>
-      <h1 class="hero-title">Bonjour, je suis<br><span class="hi">Narindra.</span></h1>
+      <h1 class="hero-title"><span class="tw-line">Bonjour, je suis</span><br><span class="hi tw-line">Narindra.</span></h1>
+      <script>
+        (function () {
+          var lines = document.querySelectorAll('.hero-title .tw-line');
+          if (!lines.length) return;
+          var texts = [], i;
+          for (i = 0; i < lines.length; i++) {
+            texts[i] = lines[i].textContent;
+            lines[i].textContent = '';
+          }
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            for (i = 0; i < lines.length; i++) lines[i].textContent = texts[i];
+            return;
+          }
+          var cursor = document.createElement('span');
+          cursor.className = 'tw-cursor';
+          cursor.setAttribute('aria-hidden', 'true');
+          function typeLine(idx) {
+            if (idx >= lines.length) return;
+            var el = lines[idx];
+            var text = texts[idx];
+            var n = 0;
+            el.textContent = '';
+            el.appendChild(cursor);
+            var timer = setInterval(function () {
+              n++;
+              el.textContent = text.slice(0, n);
+              el.appendChild(cursor);
+              if (n >= text.length) {
+                clearInterval(timer);
+                setTimeout(function () { typeLine(idx + 1); }, 320);
+              }
+            }, 62);
+          }
+          setTimeout(function () { typeLine(0); }, 250);
+        })();
+      </script>
       <p class="hero-body">Je conçois des applications web et mobile modernes, performantes et alignées sur vos objectifs. Du premier écran à la mise en production, je donne vie à vos projets.</p>
       <div class="hero-actions">
         <a href="#projets" class="btn-term">Voir mes projets <span class="button-arrow" aria-hidden="true">↗</span></a>
@@ -57,17 +93,15 @@
     </div>
     <div class="hero-visual fade d2">
       <div class="code-window">
-        <div class="code-bar"><i></i><i></i><i></i><span>narindra.dev</span><time id="liveClock" aria-hidden="true"></time></div>
+        <div class="code-bar"><i></i><i></i><i></i><span>Narindra.dev</span><time id="liveClock" aria-hidden="true"></time></div>
         <div class="code-content">
           <div class="code-comment">// Des idées aux applications.</div>
           <div><span class="code-key">const</span> developer = {</div>
           <div class="indent">name: <span class="code-string">'Narindra RAZAFIMANDIMBY'</span>,</div>
           <div class="indent">role: <span class="code-string">'Fullstack Developer'</span>,</div>
           <div class="indent">stack: [<span class="code-string">'Laravel', 'Vue.js', 'PHP'</span>],</div>
-          <div class="indent">experience: <span class="code-key">'5 ans'</span>,</div>
-          <div class="indent">focus: <span class="code-string">'Votre prochain projet'</span></div>
+          <div class="indent">experience: <span class="code-key">'+ 5 ans'</span>,</div>
           <div>};</div>
-          <div class="code-comment">// Construisons la suite, ensemble.</div>
         </div>
       </div>
       <div class="floating-tag tag-top"><span class="material-icons" aria-hidden="true">code</span> Laravel + Vue.js</div>
@@ -100,55 +134,20 @@
         <span class="mac-file">skills.config — Narindra Dev</span>
       </div>
       <div class="mac-body">
-        <div class="skills-grid">
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">PHP</span><span class="skill-pct">96%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="96" style="width:96%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">96%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="96" style="width:96%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">HTML / CSS</span><span class="skill-pct">96%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="96" style="width:96%"></div></div>
-          </div>
-          <div class="skill-row sk-laravel">
-            <div class="skill-top"><span class="skill-name">Laravel</span><span class="skill-pct">95%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="95" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">MySQL / MariaDB</span><span class="skill-pct">95%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="95" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">Bootstrap</span><span class="skill-pct">95%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="95" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row sk-vue">
-            <div class="skill-top"><span class="skill-name">Vue.js</span><span class="skill-pct">90%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="90" style="width:90%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">InertiaJS</span><span class="skill-pct">90%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="90" style="width:90%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">jQuery</span><span class="skill-pct">89%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="89" style="width:89%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">Mobile Cross-Platform</span><span class="skill-pct">85%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="85" style="width:85%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">TypeScript</span><span class="skill-pct">80%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="80" style="width:80%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-top"><span class="skill-name">CI/CD — GitHub / GitLab</span><span class="skill-pct">88%</span></div>
-            <div class="progress"><div class="progress-bar" data-w="88" style="width:88%"></div></div>
-          </div>
+        <div class="tech-row fade">
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/php/777BB4" alt="" width="40" height="40" loading="lazy" /><span>PHP</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" width="40" height="40" loading="lazy" /><span>JavaScript</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="" width="40" height="40" loading="lazy" /><span>HTML / CSS</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="" width="40" height="40" loading="lazy" /><span>Laravel</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/mariadb/003545" alt="" width="40" height="40" loading="lazy" /><span>MySQL / MariaDB</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="" width="40" height="40" loading="lazy" /><span>Bootstrap</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="" width="40" height="40" loading="lazy" /><span>Vue.js</span></div>
+          <div class="tech-item"><span class="tech-fallback" aria-hidden="true">Inertia</span><span>InertiaJS</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/jquery/0769AD" alt="" width="40" height="40" loading="lazy" /><span>jQuery</span></div>
+          <div class="tech-item"><span class="material-icons tech-fallback-icon" aria-hidden="true">devices</span><span>Mobile</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" width="40" height="40" loading="lazy" /><span>TypeScript</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/github/181717" alt="" width="40" height="40" loading="lazy" /><span>GitHub</span></div>
+          <div class="tech-item"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="" width="40" height="40" loading="lazy" /><span>GitLab</span></div>
         </div>
       </div>
     </div>
@@ -174,37 +173,37 @@
         <div class="svc-grid">
           <div class="svc-card">
             <div class="svc-num">01</div>
-            <div class="svc-icon"><span class="material-icons">language</span></div>
+            <div class="svc-icon c-web"><span class="material-icons">language</span></div>
             <div class="svc-title">Application Web</div>
             <p class="svc-text">Développement complet : backend robuste, frontend moderne, design responsive et expérience utilisateur soignée.</p>
           </div>
           <div class="svc-card">
             <div class="svc-num">02</div>
-            <div class="svc-icon"><span class="material-icons">smartphone</span></div>
+            <div class="svc-icon c-mobile"><span class="material-icons">smartphone</span></div>
             <div class="svc-title">Application Mobile</div>
             <p class="svc-text">Applications cross-platform modernes, rapides et fluides, adaptées à vos utilisateurs iOS & Android.</p>
           </div>
           <div class="svc-card">
             <div class="svc-num">03</div>
-            <div class="svc-icon"><span class="material-icons">business_center</span></div>
+            <div class="svc-icon c-erp"><span class="material-icons">business_center</span></div>
             <div class="svc-title">ERP & CRM</div>
             <p class="svc-text">Centralisation des données, gestion RH, suivi des tâches, reporting — un atout stratégique pour votre entreprise.</p>
           </div>
           <div class="svc-card">
             <div class="svc-num">04</div>
-            <div class="svc-icon"><span class="material-icons">cable</span></div>
+            <div class="svc-icon c-api"><span class="material-icons">cable</span></div>
             <div class="svc-title">Intégration API</div>
             <p class="svc-text">Connexion de services tiers, passerelles de paiement (Stripe, PayPal), systèmes d'abonnement et APIs REST.</p>
           </div>
           <div class="svc-card">
             <div class="svc-num">05</div>
-            <div class="svc-icon"><span class="material-icons">rocket_launch</span></div>
+            <div class="svc-icon c-deploy"><span class="material-icons">rocket_launch</span></div>
             <div class="svc-title">Déploiement</div>
             <p class="svc-text">Configuration serveur, pipelines CI/CD sur GitHub & GitLab, mise en production fiable et automatisée.</p>
           </div>
           <div class="svc-card">
             <div class="svc-num">06</div>
-            <div class="svc-icon"><span class="material-icons">build</span></div>
+            <div class="svc-icon c-maint"><span class="material-icons">build</span></div>
             <div class="svc-title">Maintenance</div>
             <p class="svc-text">Débogage, rénovation de code legacy, optimisation des performances et suivi continu de vos projets.</p>
           </div>
@@ -449,16 +448,16 @@
           <h3>Contact</h3>
         </div>
         <a href="tel:+261343645186" class="c-item">
-          <div class="c-icon"><span class="material-icons">phone</span></div>
+          <div class="c-icon c-wa"><span class="material-icons">phone</span></div>
           <div><div class="c-label">WhatsApp / Téléphone</div><div class="c-val">+261 34 36 451 86</div></div>
         </a>
         <a href="mailto:narindrandimby2@gmail.com" class="c-item">
-          <div class="c-icon"><span class="material-icons">email</span></div>
+          <div class="c-icon c-mail"><span class="material-icons">email</span></div>
           <div><div class="c-label">Email</div><div class="c-val">narindrandimby2@gmail.com</div></div>
         </a>
         <a href="https://www.linkedin.com/in/narindra-razafimandimby" target="_blank" class="c-item">
-          <div class="c-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="var(--accent-text)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <div class="c-icon c-li">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </div>
           <div><div class="c-label">LinkedIn</div><div class="c-val">narindra-razafimandimby</div></div>
         </a>
@@ -630,7 +629,7 @@
 
   // EmailJS init
   (function(){
-    return;
+ 
     emailjs.init({ publicKey: "hB_ucbWO5aYA9bowF" });
     setTimeout(function() {
       const userAgent = navigator.userAgent;
