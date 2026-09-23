@@ -12,6 +12,7 @@
 	<meta name="description" content="Narindra, développeur fullstack : créateur de solutions web moderne et évolutifs. Prêt à démarrer votre projet et vous accompagner dès maintenant !">
 	<meta name="keywords" content="Narindra, portfolio, Développeur, Laravel, Vue, mobile, HTML, CSS, Responsive, SQL, jQuery, JavaScript, js, Git, InertiaJS, Stripe, Paypal, Backend, Frontend, API, Rest Full, javascript, Typescript, Application web, Développement Frontend, Développement Backend, Technologies Web, Freelance, Madagascar, Antananarivo">
   <link rel="stylesheet" href="css/portfolio.css" />
+  <script>document.documentElement.classList.add('js-reveal');</script>
 </head>
 <body>
 <a class="skip-link" href="#accueil">Aller au contenu</a>
@@ -603,6 +604,29 @@
       setTimeout(() => w.remove(), 600);
     });
   });
+
+  // ─── CARDS FADE-IN AU SCROLL (une seule fois) ────────────
+  (function() {
+    const cards = document.querySelectorAll('.svc-card, .pgal-card, .testi-card');
+    if (!cards.length) return;
+    if (!('IntersectionObserver' in window)) {
+      cards.forEach(c => c.classList.add('in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const sibs = [...el.parentElement.children].filter(c =>
+          c.classList.contains('svc-card') || c.classList.contains('pgal-card') || c.classList.contains('testi-card'));
+        const idx = Math.max(sibs.indexOf(el), 0);
+        el.style.setProperty('--d', Math.min(idx, 5) * 0.07 + 's');
+        el.classList.add('in');
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+    cards.forEach(c => io.observe(c));
+  })();
 
   // EmailJS init
   (function(){
