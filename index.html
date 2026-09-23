@@ -97,7 +97,7 @@
         <div class="code-content">
           <div class="code-comment">// Des idées aux applications.</div>
           <div><span class="code-key">const</span> developer = {</div>
-          <div class="indent">name: <span class="code-string">'Narindra RAZAFIMANDIMBY'</span>,</div>
+          <div class="indent">name: <span class="code-string">'Narindra NDIMBY'</span>,</div>
           <div class="indent">role: <span class="code-string">'Fullstack Developer'</span>,</div>
           <div class="indent">stack: [<span class="code-string">'Laravel', 'Vue.js', 'PHP'</span>],</div>
           <div class="indent">experience: <span class="code-key">'+ 5 ans'</span>,</div>
@@ -606,7 +606,7 @@
 
   // ─── CARDS FADE-IN AU SCROLL (une seule fois) ────────────
   (function() {
-    const cards = document.querySelectorAll('.svc-card, .pgal-card, .testi-card');
+    const cards = document.querySelectorAll('.svc-card, .pgal-card, .testi-card, .tech-item');
     if (!cards.length) return;
     if (!('IntersectionObserver' in window)) {
       cards.forEach(c => c.classList.add('in'));
@@ -617,7 +617,7 @@
         if (!entry.isIntersecting) return;
         const el = entry.target;
         const sibs = [...el.parentElement.children].filter(c =>
-          c.classList.contains('svc-card') || c.classList.contains('pgal-card') || c.classList.contains('testi-card'));
+          c.classList.contains('svc-card') || c.classList.contains('pgal-card') || c.classList.contains('testi-card') || c.classList.contains('tech-item'));
         const idx = Math.max(sibs.indexOf(el), 0);
         el.style.setProperty('--d', Math.min(idx, 5) * 0.07 + 's');
         el.classList.add('in');

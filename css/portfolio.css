@@ -58,8 +58,8 @@ section { position: relative; padding: 96px 28px; }
 @keyframes reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
 /* Cards fade in on first scroll into view */
-.js-reveal .svc-card, .js-reveal .pgal-card, .js-reveal .testi-card { opacity: 0; }
-.svc-card.in, .pgal-card.in, .testi-card.in { opacity: 1; animation: cardIn .55s ease var(--d, 0s) backwards; }
+.js-reveal .svc-card, .js-reveal .pgal-card, .js-reveal .testi-card, .js-reveal .tech-item { opacity: 0; }
+.svc-card.in, .pgal-card.in, .testi-card.in, .tech-item.in { opacity: 1; animation: cardIn .55s ease var(--d, 0s) backwards; }
 @keyframes cardIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 
 /* Intro: the reference's two-column composition, personalized with real content. */
