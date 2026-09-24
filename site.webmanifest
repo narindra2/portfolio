@@ -1,0 +1,13 @@
+{
+  "name": "Narindra NDIMBY — Portfolio",
+  "short_name": "Narindra",
+  "description": "Portfolio de Narindra, développeur fullstack Laravel & Vue.js.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://narindra.vercel.app/sitemap.xml
