@@ -84,7 +84,7 @@ section { position: relative; padding: 96px 28px; }
 .code-bar i, .code-bar i:nth-child(1), .code-bar i:nth-child(2), .code-bar i:nth-child(3) { width: 10px; height: 10px; border-radius: 50%; background: var(--muted) !important; }
 .code-bar span { font: 600 13px var(--mono); color: var(--accent-text); margin-left: 8px; }
 .code-bar time { margin-left: auto; font: 13px var(--mono); color: var(--muted); }
-.code-content { padding: 32px 30px; font: 16px/2.3 var(--mono); overflow-wrap: anywhere; color: var(--muted); }
+.code-content { padding: 32px 22px; font: 14px/2.3 var(--mono); white-space: nowrap; overflow-x: auto; color: var(--muted); }
 .code-content .indent { padding-left: 26px; color: var(--muted); }
 .code-key { color: #7c3aed; font-weight: 500; }
 .code-var { color: #2563eb; }
@@ -232,7 +232,7 @@ footer { max-width: 1160px; margin: auto; padding: 30px 28px; display: flex; jus
   .hero-actions { flex-wrap: wrap; }
   .hero-visual { max-width: 520px; width: calc(100% - 20px); margin: auto; }
   .hero-visual::before { width: 100%; }
-  .code-content { font-size: 15px; padding: 26px 22px; }
+  .code-content { font-size: 14px; padding: 26px 22px; }
   .hero-bottom { margin-top: 45px; }
   .hero-stats { gap: 22px; }
   .hero-stat { padding-right: 22px; }
