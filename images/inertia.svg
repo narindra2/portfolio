@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Inertia">
+  <defs>
+    <linearGradient id="ig" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8859F6"/>
+      <stop offset="1" stop-color="#6C4BF4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="24" cy="24" r="24" fill="url(#ig)"/>
+  <path transform="translate(7.2,7.2) scale(1.4)" fill="#fff" d="M6.901 5.331H0L6.669 12 0 18.669h6.901L13.571 12 6.9 5.331zm10.43 0H10.43L17.099 12l-6.67 6.669h6.902L24 12l-6.669-6.669z"/>
+</svg>
