@@ -142,7 +142,17 @@ section { position: relative; padding: 96px 28px; }
 .case-card:hover { transform: translate(-3px,-3px); border-color: var(--accent); box-shadow: 5px 5px 0 var(--accent-dim), 0 8px 18px rgb(0 0 0 / 5%); }
 .case-title { font-size: 21px; font-weight: 600; letter-spacing: -.3px; margin: 10px 0 12px; }
 .case-text { color: var(--muted); font-size: 15.5px; line-height: 1.8; }
+.case-text + .case-text { margin-top: 12px; }
 .case-text strong { color: var(--text); font-weight: 600; }
+.case-text a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.case-text a:hover { text-decoration-thickness: 2px; }
+.case-list { margin: 12px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 15.5px; line-height: 1.75; }
+.case-list li { position: relative; padding-left: 22px; margin-bottom: 7px; }
+.case-list li::before { content: '›'; position: absolute; left: 4px; top: 0; color: var(--accent-text); font-weight: 700; }
+.case-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 16px; }
+.case-footer .case-stack { margin-top: 0; }
+.case-link { font: 600 15px var(--sans); color: var(--accent-text); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; border-bottom: 1px solid var(--accent-text); padding-bottom: 2px; }
+.case-link:hover { opacity: .75; }
 .pgal-img-wrap.img-err::after { content: 'Aperçu indisponible'; position: absolute; inset: 0; display: grid; place-items: center; font-size: 15px; color: var(--muted); }
 .testi-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
 .testi-card { padding: 28px; display: flex; flex-direction: column; }
