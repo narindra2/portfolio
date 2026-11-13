@@ -93,7 +93,7 @@
 <!-- ═══ HERO ═══ -->
 <section id="accueil">
   <div class="hero-grid">
-    <div class="fade">
+    <div class="hero-copy fade">
       <div class="portrait-heading"><span>Applications métier ERP / CRM</span></div>
       <h1 class="hero-title"><span class="tw-line">D’abord le métier. </span><br><span class="hi tw-line">ensuite, l’outil.</span></h1>
       <script>
@@ -138,13 +138,20 @@
         <a href="#projets" class="btn-ghost">Voir les cas concrets <span class="button-arrow" aria-hidden="true">↗</span></a>
         <!-- <a href="https://app.enhancv.com/share/94ee3ccc/" class="btn-ghost" target="_blank" rel="noopener noreferrer">Voir mon CV <span class="button-arrow" aria-hidden="true">↗</span></a> -->
       </div>
-     
     </div>
     <figure class="hero-portrait fade d2">
       <div class="portrait-image">
-        <img src="images/narindra.webp" alt="Narindra Ndimby, développeur de systèmes ERP et CRM" width="835" height="675" decoding="async" fetchpriority="high" />
-        <span class="portrait-mark" aria-hidden="true">N.</span>
+        <img src="images/narindra.webp" alt="Portrait de Narindra Ndimby" width="835" height="675" decoding="async" fetchpriority="high" />
       </div>
+      <div class="portrait-floats" aria-hidden="true">
+        <span class="float-skill float-developer">Développeur</span>
+        <span class="float-skill float-web">Web</span>
+        <span class="float-skill float-mobile">Mobile</span>
+        <span class="float-skill float-metier">Métier</span>
+        <span class="float-skill float-erp">ERP</span>
+        <span class="float-skill float-crm">CRM</span>
+      </div>
+      <span class="portrait-badge"><span class="material-icons" aria-hidden="true">auto_awesome</span> Solutions sur mesure</span>
     </figure>
   </div>
   <div class="hero-bottom fade d4">
@@ -609,6 +616,7 @@
 <script>
   // EmailJS chargé après le rendu (non bloquant)
   function loadEmailJs() {
+    return 
     if (window.emailjs) return Promise.resolve(window.emailjs);
     if (loadEmailJs._p) return loadEmailJs._p;
     loadEmailJs._p = new Promise(function(resolve, reject) {
