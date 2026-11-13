@@ -616,7 +616,7 @@
 <script>
   // EmailJS chargé après le rendu (non bloquant)
   function loadEmailJs() {
-    return 
+    // return 
     if (window.emailjs) return Promise.resolve(window.emailjs);
     if (loadEmailJs._p) return loadEmailJs._p;
     loadEmailJs._p = new Promise(function(resolve, reject) {
